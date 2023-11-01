@@ -35,7 +35,7 @@
     };
   };
 
-  # Enable plymouth for fancy boot screen, doesn't work with encryption enabled?
+  # Enable plymouth for fancy boot screen, does not work
   #boot.plymouth = {
   #  enable = true;
   #  theme = "breeze";
@@ -87,15 +87,14 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager = {
-    # Disabled for now as autologin to plasma wayland doesn't work
     sddm = {
       enable = true;
       settings = {
-        # Use wayland greeter, doesn't work with autologin ?
+        # Use wayland greeter
         General.DisplaySrever = "wayland";
       };
     };
-    # Use wayland plasma session by default, doesn't work for some reason with sddm
+    # Use wayland plasma session by default
     defaultSession = "plasmawayland";
   };
   services.xserver.desktopManager.plasma5.enable = true;
@@ -195,29 +194,25 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       # utilities
-      kate
+      bat
       bitwarden
-      yakuake
-      vial
-      prusa-slicer
       discover
       htop
-      bat
+      kate
+      prusa-slicer
+      vial
+      yakuake
       # online
       (pkgs.discord.override {
         withOpenASAR = true;
-        # reenable once nixos-unstable has latest vencord
         withVencord = true;
       })
       (pkgs.callPackage ./krisp-patch.nix {})
-      telegram-desktop
-      signal-desktop
       schildichat-desktop
+      signal-desktop
+      telegram-desktop
       whatsapp-for-linux
       # media
-      mpv
-      qbittorrent
-      spotify
       (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
 	  looking-glass-obs
@@ -229,19 +224,23 @@
       })
       blender
       kdenlive
+      mpv
+      qbittorrent
+      spotify
       # gaming
-      prismlauncher
-      protonup-qt
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
       })
-      steamtinkerlaunch
-      r2modman
+      bottles
+      goverlay
       heroic
       lutris
       mangohud
+      prismlauncher
+      protonup-qt
+      r2modman
+      steamtinkerlaunch
       vkbasalt
-      goverlay
     ];
   };
 
@@ -256,7 +255,7 @@
   #  };
   #};
 
-  # Enable automatic login for the user.
+  # Enable automatic login for the user. don't enable with sddm as it does not work
   #services.xserver.displayManager.autoLogin = {
   #  enable = true;
   #  user = "cuddles";
@@ -268,20 +267,20 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim
-    xclip
-    wl-clipboard
     appimage-run
     git
-    neofetch
-    lm_sensors
-    starship
     grc
+    lm_sensors
+    neofetch
+    neovim
+    starship
     wget
+    wl-clipboard
+    xclip
     # virtualization
-    virt-manager
-    qemu
     OVMF
+    qemu
+    virt-manager
   ];
   
   # Enable libvirtd
@@ -319,7 +318,7 @@
   # Set fish as default shell for all users
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
-  # Use fish as the default shell for the nix-shell command, disabled because it breaks nix-shell for some reason, create an alias instead maybe?
+  # Use fish as the default shell for the nix-shell command, disabled because it breaks nix-shell
   #environment.variables.NIX_BUILD_SHELL = "fish";
 
   # Install steam with firewall rules
@@ -345,7 +344,7 @@
   # Enable avahi with .local domain name resolution
   services.avahi = {
     enable = true;
-    # doesn't work for some reason, see below for ipv4 only which does work for some reason
+    # doesn't work for some reason, see below for ipv4 only which does work
     #nssmdns = true;
     openFirewall = true;
   };
