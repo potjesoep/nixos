@@ -268,10 +268,10 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     appimage-run
+    fastfetch
     git
     grc
     lm_sensors
-    neofetch
     neovim
     starship
     wget
