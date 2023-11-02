@@ -93,6 +93,12 @@
         # Use wayland greeter
         General.DisplaySrever = "wayland";
       };
+      settings = {
+        Theme = {
+	  CursorTheme = "breeze_cursors";
+	  CursorSize = 24;
+	};
+      };
     };
     # Use wayland plasma session by default
     defaultSession = "plasmawayland";
@@ -273,6 +279,7 @@
     grc
     lm_sensors
     neovim
+    sddm-kcm
     starship
     wget
     wl-clipboard
