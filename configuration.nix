@@ -89,10 +89,7 @@
   services.xserver.displayManager = {
     sddm = {
       enable = true;
-      settings = {
-        # Use wayland greeter
-        General.DisplaySrever = "wayland";
-      };
+      wayland.enable = true;
       settings = {
         Theme = {
 	  CursorTheme = "breeze_cursors";
