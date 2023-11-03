@@ -23,9 +23,6 @@
     options = "--delete-older-than 30d";
   };
 
-  # enable bootspec for secure boot support
-  boot.bootspec.enable = true;
-
   # Bootloader.
   boot.loader = {
     timeout = 1;
