@@ -85,6 +85,7 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
+
   # Enable the KDE Plasma Desktop Environment.
   services.xserver.displayManager = {
     sddm = {
@@ -96,6 +97,11 @@
 	  CursorSize = 24;
 	};
       };
+    };
+    # Enable automatic login for the user. don't enable with sddm as it does not work
+    autoLogin = {
+      enable = true;
+      user = "cuddles";
     };
     # Use wayland plasma session by default
     defaultSession = "plasmawayland";
@@ -256,12 +262,6 @@
   #    videoInput = "hwaccel"; # requires `services.replay-sorcery.enableSysAdminCapability = true`
   #    videoFramerate = 60;
   #  };
-  #};
-
-  # Enable automatic login for the user. don't enable with sddm as it does not work
-  #services.xserver.displayManager.autoLogin = {
-  #  enable = true;
-  #  user = "cuddles";
   #};
 
   # Allow unfree packages
