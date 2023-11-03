@@ -6,8 +6,8 @@
 
 {
   imports = [ # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
-    /etc/nixos/pci-passthrough.nix
+    ./hardware-configuration.nix
+    ./pci-passthrough.nix
   ];
 
   # Enable nix command and flakes
@@ -277,7 +277,6 @@
     git
     grc
     lm_sensors
-    neovim
     sddm-kcm
     starship
     wget
@@ -326,6 +325,12 @@
   users.defaultUserShell = pkgs.fish;
   # Use fish as the default shell for the nix-shell command, disabled because it breaks nix-shell
   #environment.variables.NIX_BUILD_SHELL = "fish";
+
+  # Enable neovim and set as default editor
+  programs.neovim = {
+    enable = true;
+    defaultEditor = true;
+  };
 
   # Install steam with firewall rules
   programs.steam = {
