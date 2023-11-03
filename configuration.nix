@@ -231,6 +231,7 @@
       mpv
       qbittorrent
       spotify
+      xwaylandvideobridge
       # gaming
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
