@@ -35,11 +35,13 @@
     };
   };
 
-  # Enable plymouth for fancy boot screen, does not work
-  #boot.plymouth = {
-  #  enable = true;
-  #  theme = "breeze";
-  #};
+  # Enable plymouth for fancy boot screen.
+  boot.initrd.systemd.enable = true;
+  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
+  boot.plymouth = {
+    enable = true;
+    theme = "breeze";
+  };
 
   # Use linux_zen and add v4l2loopback for obs virtualcam
   boot.kernelPackages = pkgs.linuxPackages_zen;
