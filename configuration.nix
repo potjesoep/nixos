@@ -279,9 +279,15 @@
     lm_sensors
     sddm-kcm
     starship
+    unzip
     wget
     wl-clipboard
     xclip
+    # steamtinkerlaunch deps
+    xdotool
+    xorg.xwininfo
+    xxd
+    yad
     # virtualization
     OVMF
     qemu
