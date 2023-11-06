@@ -211,6 +211,9 @@
         withOpenASAR = true;
         withVencord = true;
       })
+      (pkgs.ungoogled-chromium.override {
+        enableWideVine = true;
+      })
       (pkgs.callPackage ./krisp-patch.nix {})
       schildichat-desktop
       signal-desktop
