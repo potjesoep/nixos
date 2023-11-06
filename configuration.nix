@@ -234,6 +234,7 @@
       mpv
       qbittorrent
       spotify
+      xwaylandvideobridge
       # gaming
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
@@ -290,7 +291,12 @@
   ];
   
   # Enable libvirtd
-  virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.ovmf = {
+      enable = true;
+    };
+  };
   
   # CHANGE: add your own user here
   users.groups.libvirtd.members = [ "root" "cuddles"];
@@ -298,9 +304,9 @@
   # CHANGE: use 
   #     ls /nix/store/*OVMF*/FV/OVMF{,_VARS}.fd | tail -n2 | tr '\n' : | sed -e 's/:$//'
   # to find your nix store paths
-  virtualisation.libvirtd.qemu.verbatimConfig = ''
-    nvram = [ "${pkgs.OVMF}/FV/OVMF.fd:${pkgs.OVMF}/FV/OVMF_VARS.fd" ]
-  '';
+  #virtualisation.libvirtd.qemu.verbatimConfig = ''
+  #  nvram = [ "${pkgs.OVMF}/FV/OVMF.fd:${pkgs.OVMF}/FV/OVMF_VARS.fd" ]
+  #'';
 
   # Add appimages as a binary type to easily run them
   boot.binfmt.registrations.appimage = {
