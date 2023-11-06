@@ -43,8 +43,9 @@
     theme = "breeze";
   };
 
-  # Use linux_zen and add v4l2loopback for obs virtualcam
+  # Use linux_zen
   boot.kernelPackages = pkgs.linuxPackages_zen;
+  # add v4l2loopback for obs virtualcam
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = with config.boot.kernelPackages; [
     v4l2loopback
@@ -53,6 +54,11 @@
     options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
   '';
   security.polkit.enable = true;
+  # udev rules for adb and vial
+  services.udev.packages = with pkgs; [
+    android-udev-rules
+    vial
+  ];
 
   # Enable networking and bluetooth
   networking.networkmanager.enable = true;
@@ -195,7 +201,7 @@
   users.users.cuddles = {
     isNormalUser = true;
     description = "cuddles";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd" ];
     packages = with pkgs; [
       # utilities
       bat
@@ -298,15 +304,8 @@
     };
   };
   
-  # CHANGE: add your own user here
-  users.groups.libvirtd.members = [ "root" "cuddles"];
-  
-  # CHANGE: use 
-  #     ls /nix/store/*OVMF*/FV/OVMF{,_VARS}.fd | tail -n2 | tr '\n' : | sed -e 's/:$//'
-  # to find your nix store paths
-  #virtualisation.libvirtd.qemu.verbatimConfig = ''
-  #  nvram = [ "${pkgs.OVMF}/FV/OVMF.fd:${pkgs.OVMF}/FV/OVMF_VARS.fd" ]
-  #'';
+  # Enable adb
+  programs.adb.enable = true;
 
   # Add appimages as a binary type to easily run them
   boot.binfmt.registrations.appimage = {
