@@ -61,7 +61,10 @@
   ];
 
   # Enable networking and bluetooth
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
@@ -279,6 +282,8 @@
     git
     grc
     lm_sensors
+    pypy3
+    python3
     sddm-kcm
     starship
     unzip
