@@ -212,6 +212,7 @@
       discover
       htop
       kate
+      localsend
       prusa-slicer
       vial
       yakuake
@@ -257,6 +258,7 @@
       protonup-qt
       r2modman
       steamtinkerlaunch
+      vintagestory
       vkbasalt
     ];
   };
@@ -282,7 +284,7 @@
     git
     grc
     lm_sensors
-    pypy3
+    #pypy3
     python3
     sddm-kcm
     starship
@@ -297,8 +299,8 @@
     yad
     # virtualization
     OVMF
+    gnome.gnome-boxes
     qemu
-    virt-manager
   ];
   
   # Enable libvirtd
@@ -308,6 +310,7 @@
       enable = true;
     };
   };
+  programs.virt-manager.enable = true;
   
   # Enable adb
   programs.adb.enable = true;
