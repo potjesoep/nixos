@@ -244,6 +244,7 @@
       mpv
       qbittorrent
       spotify
+      syncplay
       xwaylandvideobridge
       # gaming
       (pkgs.tetrio-desktop.override {
