@@ -207,10 +207,8 @@
     extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd" ];
     packages = with pkgs; [
       # utilities
-      bat
       bitwarden
       discover
-      htop
       kate
       localsend
       prusa-slicer
@@ -261,6 +259,7 @@
       steamtinkerlaunch
       vintagestory
       vkbasalt
+      wineWowPackages.waylandFull
     ];
   };
 
@@ -284,11 +283,11 @@
     appimage-run
     git
     grc
+    htop
     lm_sensors
-    #pypy3
+    pypy3
     python3
     sddm-kcm
-    starship
     unzip
     wget
     wl-clipboard
