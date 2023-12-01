@@ -222,7 +222,7 @@
       (pkgs.ungoogled-chromium.override {
         enableWideVine = true;
       })
-      (pkgs.callPackage ./krisp-patch.nix {})
+      (pkgs.callPackage ./pkgs/krisp-patch {})
       schildichat-desktop
       signal-desktop
       telegram-desktop
