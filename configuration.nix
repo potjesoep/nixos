@@ -11,40 +11,40 @@
   ];
 
   # Patch XWayland with explicit sync support
-  nixpkgs.overlays = [(final: prev: {
-    #xwayland = prev.xwayland.overrideAttrs (old: {
-    #  patches = (old.patches or []) ++ [
-    #    (prev.fetchpatch {
-    #      url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/967.patch";
-    #      hash = "sha256-OnMDiYK5S6BdXFvj4TEElcgTlcz3fwWcTM1QBCP1leQ=";
-    #    })
-    #    #(prev.fetchpatch {
-    #    #  url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/968.patch";
-    #    #  hash = "sha256-TiNP6XyAKdTNi/bcjjno9fQ0/MXV2iC2KnzWhroTM/I=";
-    #    #})
-    #    #(prev.fetchpatch {
-    #    #  url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/969.patch";
-    #    #  hash = "sha256-oAS+ifMr6ZSwvDXhFVXyEBqhSXQiYoaVl2gtei3z73E=";
-    #    #})
-    #  ];
-    #});
-    xorgproto = prev.xorgproto.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        (prev.fetchpatch {
-          url = "https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/59.patch";
-	  hash = "sha256-YckSwW8ZxdORu9EFGZZQ1WZUPCYb1/+QxSW3+KFWsVc=";
-        })
-      ];
-    });
-    wayland-protocols = prev.wayland-protocols.overrideAttrs (old: {
-      patches = (old.patches or []) ++ [
-        (prev.fetchpatch {
-          url = "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/90.patch";
-          hash = "sha256-YckSwW8ZxdORu9EFGZZQ1WZUPCYb1/+QxSW3+KFWsVc=";
-        })
-      ];
-    });
-  })];
+  #nixpkgs.overlays = [(final: prev: {
+  #  xwayland = prev.xwayland.overrideAttrs (old: {
+  #    patches = (old.patches or []) ++ [
+  #      (prev.fetchpatch {
+  #        url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/967.patch";
+  #        hash = "sha256-OnMDiYK5S6BdXFvj4TEElcgTlcz3fwWcTM1QBCP1leQ=";
+  #      })
+  #      (prev.fetchpatch {
+  #        url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/968.patch";
+  #        hash = "sha256-TiNP6XyAKdTNi/bcjjno9fQ0/MXV2iC2KnzWhroTM/I=";
+  #      })
+  #      (prev.fetchpatch {
+  #        url = "https://gitlab.freedesktop.org/xorg/xserver/-/merge_requests/969.patch";
+  #        hash = "sha256-oAS+ifMr6ZSwvDXhFVXyEBqhSXQiYoaVl2gtei3z73E=";
+  #      })
+  #    ];
+  #  });
+  #  xorgproto = prev.xorgproto.overrideAttrs (old: {
+  #    patches = (old.patches or []) ++ [
+  #      (prev.fetchpatch {
+  #        url = "https://gitlab.freedesktop.org/xorg/proto/xorgproto/-/merge_requests/59.patch";
+  #        hash = "sha256-YckSwW8ZxdORu9EFGZZQ1WZUPCYb1/+QxSW3+KFWsVc=";
+  #      })
+  #    ];
+  #  });
+  #  wayland-protocols = prev.wayland-protocols.overrideAttrs (old: {
+  #    patches = (old.patches or []) ++ [
+  #      (prev.fetchpatch {
+  #        url = "https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/90.patch";
+  #        hash = "sha256-YckSwW8ZxdORu9EFGZZQ1WZUPCYb1/+QxSW3+KFWsVc=";
+  #      })
+  #    ];
+  #  });
+  #})];
 
   # Enable nix command and flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
