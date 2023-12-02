@@ -398,6 +398,15 @@
   };
 
   # List services that you want to enable:
+  
+  # Enable syncthing
+  services.syncthing = {
+    enable = true;
+    user = "cuddles";
+    configDir = "/home/cuddles/.config/syncthing"; # Folder for Syncthing's settings and keys
+    dataDir = "/home/cuddles/.config/syncthing/db"; # Folder for Syncthing's database
+    openDefaultPorts = true;
+  };
 
   # Enable dconf for virt-manager
   programs.dconf.enable = true;
