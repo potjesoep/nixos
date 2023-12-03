@@ -5,11 +5,6 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ./pci-passthrough.nix
-  ];
-
   # Enable nix command and flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -23,182 +18,8 @@
     options = "--delete-older-than 30d";
   };
 
-  # Bootloader.
-  boot.loader = {
-    timeout = 1;
-    efi = {
-      canTouchEfiVariables = true;
-    };
-    systemd-boot = {
-      enable = true;
-      consoleMode = "max";
-    };
-  };
-
-  # Enable plymouth for fancy boot screen.
-  boot.initrd.systemd.enable = true;
-  boot.kernelParams = [ "quiet" "udev.log_level=3" ];
-  boot.plymouth = {
-    enable = true;
-    theme = "breeze";
-  };
-
-  # Use linux_zen
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  # add v4l2loopback for obs virtualcam
-  boot.kernelModules = [ "v4l2loopback" ];
-  boot.extraModulePackages = with config.boot.kernelPackages; [
-    v4l2loopback
-  ];
-  boot.extraModprobeConfig = ''
-    options v4l2loopback devices=1 video_nr=1 card_label="OBS Cam" exclusive_caps=1
-  '';
-  security.polkit.enable = true;
-  # udev rules for adb and vial
-  services.udev.packages = with pkgs; [
-    android-udev-rules
-    vial
-  ];
-
-  # Enable networking and bluetooth
-  networking = {
-    networkmanager.enable = true;
-    #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  };
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-
-  # Set your time zone.
-  time.timeZone = "Europe/Amsterdam";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "nl_NL.UTF-8";
-    LC_IDENTIFICATION = "nl_NL.UTF-8";
-    LC_MEASUREMENT = "nl_NL.UTF-8";
-    LC_MONETARY = "nl_NL.UTF-8";
-    LC_NAME = "nl_NL.UTF-8";
-    LC_NUMERIC = "nl_NL.UTF-8";
-    LC_PAPER = "nl_NL.UTF-8";
-    LC_TELEPHONE = "nl_NL.UTF-8";
-    LC_TIME = "nl_NL.UTF-8";
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager = {
-    sddm = {
-      enable = true;
-      wayland.enable = true;
-      settings = {
-        Theme = {
-	  CursorTheme = "breeze_cursors";
-	  CursorSize = 24;
-	};
-      };
-    };
-    # Enable automatic login for the user. don't enable with sddm as it does not work
-    autoLogin = {
-      enable = true;
-      user = "cuddles";
-    };
-    # Use wayland plasma session by default
-    defaultSession = "plasmawayland";
-  };
-  services.xserver.desktopManager.plasma5.enable = true;
-  
-  # Enable KDE Connect
-  programs.kdeconnect.enable = true;
-
-  # Unlock kwallet on login
-  security.pam.services.sddm.enableKwallet = true;
-
-  # Enable gtk/wlr/kde desktop portals
-  xdg = {
-    portal = {
-      enable = true;
-      extraPortals = with pkgs; [
-        xdg-desktop-portal-wlr
-        xdg-desktop-portal-gtk
-        xdg-desktop-portal-kde
-      ];
-    };
-  };
-
-  # Enable plasma browser integration and Make Firefox use the KDE file picker. 
-  # Preferences source: https://wiki.archlinux.org/title/firefox#KDE_integration
-  programs.firefox = {
-    enable = true;
-    preferences = {
-      "widget.use-xdg-desktop-portal.file-picker" = 1;
-    };
-    # Already enabled by enabling plasma
-    #nativeMessagingHosts.packages = [ pkgs.plasma5Packages.plasma-browser-integration ];
-  };
-
-  # Fix wayland black screens
-  environment.variables = {
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
-    MOZ_DISABLE_RDD_SANDBOX = "1";
-    STEAM_FORCE_DESKTOPUI_SCALING = "1.5";
-  };
-
-  # Save display configuration, not needed anymore it seems?
-  #services.autorandr.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = "euro";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Add bluetooth audio codec support
-  environment.etc = {
-	"wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
-		bluez_monitor.properties = {
-			["bluez5.enable-sbc-xq"] = true,
-			["bluez5.enable-msbc"] = true,
-			["bluez5.enable-hw-volume"] = true,
-			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-		}
-	'';
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput = {
-    enable = true;
-    
-    # disabling mouse acceleration
-    mouse = {
-      accelProfile = "flat";
-    };
-  };
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.cuddles = {
@@ -276,9 +97,6 @@
   #  };
   #};
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -305,7 +123,7 @@
     qemu
   ];
   
-  # Enable libvirtd
+  # Enable libvirtd, ovmf and virt-manager
   virtualisation.libvirtd = {
     enable = true;
     qemu.ovmf = {
@@ -364,7 +182,7 @@
   };
 
   # List services that you want to enable:
-  
+
   # Enable syncthing
   services.syncthing = {
     enable = true;
@@ -373,22 +191,6 @@
     dataDir = "/home/cuddles/.config/syncthing/db"; # Folder for Syncthing's database
     openDefaultPorts = true;
   };
-
-  # Enable dconf for virt-manager
-  programs.dconf.enable = true;
-
-  # Enable avahi with .local domain name resolution
-  services.avahi = {
-    enable = true;
-    # doesn't work for some reason, see below for ipv4 only which does work
-    #nssmdns = true;
-    openFirewall = true;
-  };
-  system.nssModules = pkgs.lib.optional true pkgs.nssmdns;
-  system.nssDatabases.hosts = pkgs.lib.optionals true (pkgs.lib.mkMerge [
-    (pkgs.lib.mkBefore [ "mdns4_minimal [NOTFOUND=return]" ]) # before resolve
-    (pkgs.lib.mkAfter [ "mdns4" ]) # after dns
-  ]);
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

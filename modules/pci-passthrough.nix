@@ -1,11 +1,4 @@
-# put this file in /etc/nixos/
-# change the settings tagged with "CHANGE:"
-# and add 
-#   ./pci-passthrough.nix
-# to /etc/nixos/configuration.nix in `imports`
-
-{config, pkgs, ... }:
-{  
+{
   # CHANGE: intel_iommu enables iommu for intel CPUs with VT-d
   # use amd_iommu if you have an AMD CPU with AMD-Vi
   boot.kernelParams = [ "amd_iommu=on" ];
