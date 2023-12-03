@@ -1,4 +1,6 @@
-{ config, lib, ... }: {
+{ config, lib, pkgs, modulesPath, ... }:
+
+{
   boot.kernelModules = [ "kvm-amd" "k10temp" ];
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
   hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
