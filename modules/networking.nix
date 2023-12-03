@@ -1,4 +1,6 @@
-{ lib, pkgs, ...}: {
+{ lib, pkgs, ...}:
+
+{
   # Enable networking and bluetooth
   networking = {
     networkmanager.enable = true;
@@ -15,14 +17,14 @@
 
   # Add bluetooth audio codec support
   environment.etc = {
-	"wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
-		bluez_monitor.properties = {
-			["bluez5.enable-sbc-xq"] = true,
-			["bluez5.enable-msbc"] = true,
-			["bluez5.enable-hw-volume"] = true,
-			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-		}
-	'';
+    "wireplumber/bluetooth.lua.d/51-bluez-config.lua".text = ''
+        bluez_monitor.properties = {
+          ["bluez5.enable-sbc-xq"] = true,
+          ["bluez5.enable-msbc"] = true,
+          ["bluez5.enable-hw-volume"] = true,
+          ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+        }
+    '';
   };
 
   # Enable avahi with .local domain name resolution
