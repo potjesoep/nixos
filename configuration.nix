@@ -240,6 +240,7 @@
       blender
       kdenlive
       mpv
+      nicotine-plus
       qbittorrent
       spotify
       syncplay
