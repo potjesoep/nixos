@@ -1,4 +1,4 @@
-{ config, lib, pkgs, modulesPath, ... }:
+{ config, lib, ... }:
 
 {
   boot.kernelModules = [ "kvm-amd" "k10temp" ];
