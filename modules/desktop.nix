@@ -60,7 +60,6 @@
     NIXOS_OZONE_WL = "1";
     MOZ_ENABLE_WAYLAND = "1";
     MOZ_DISABLE_RDD_SANDBOX = "1";
-    STEAM_FORCE_DESKTOPUI_SCALING = "1.5";
   };
 
   # Configure keymap in X11
