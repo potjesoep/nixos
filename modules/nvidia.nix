@@ -35,12 +35,8 @@
     nvidiaSettings = true;
 
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.production;
   };
-
-  services.xserver.screenSection = ''
-    Option "metamodes" "USB-C-0: 2560x1440_60 +3440+320 {rotation=left}, DP-0: 3440x1440_165 +0+1440, DP-2: 2560x1440_144 +880+0"
-  '';
 
   # Add nvidia va-api driver for replay-sorcery to work
   environment.systemPackages = with pkgs; [
