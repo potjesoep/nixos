@@ -12,6 +12,11 @@
         {
           networking.hostName = "nixos";
           boot.kernelModules = [ "it87" ];
+          boot.initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
+          fileSystems."/more" = {
+            device = "/dev/disk/by-label/tree_more";
+            fsType = "f2fs";
+          };
         }
         ./configuration.nix
         ./modules/amd.nix
