@@ -29,6 +29,9 @@
       modules = [
         {
           networking.hostName = "nixos-laptop";
+          console.earlySetup = true;
+          console.useXkbConfig = true;
+          services.xserver.xkbVariant = "workman";
         }
         ./configuration.nix
         ./modules/amd.nix
