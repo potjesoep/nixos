@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   # Enable the X11 windowing system.
@@ -65,7 +65,7 @@
   # Configure keymap in X11
   services.xserver = {
     layout = "us";
-    xkbVariant = "euro";
+    xkbVariant = lib.mkDefault "euro";
   };
 
   # Enable CUPS to print documents.
