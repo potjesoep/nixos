@@ -62,6 +62,7 @@
       spotify
       syncplay
       syncthingtray
+      vlc
       xwaylandvideobridge
       # gaming
       (pkgs.tetrio-desktop.override {
