@@ -43,6 +43,9 @@
     package = config.boot.kernelPackages.nvidiaPackages.production;
   };
 
+  # Load nvidia_uvm again for some reason it stopped working
+  boot.kernelModules = [ "nvidia_uvm" ];
+
   # Set libva driver name for hardware accelerataed video encoding/decoding
   environment.variables = {
     LIBVA_DRIVER_NAME = "nvidia";
