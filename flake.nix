@@ -10,12 +10,22 @@
       system = "x86_64-linux";
       modules = [
         {
-          networking.hostName = "nixos";
-          boot.kernelModules = [ "it87" ];
           boot.initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
-          fileSystems."/more" = {
+          boot.kernelModules = [ "it87" ];
+          boot.supportedFilesystems = [ "ntfs" ];
+          networking.hostName = "nixos";
+          fileSystems."/mnt/more" = {
             device = "/dev/disk/by-label/tree_more";
             fsType = "f2fs";
+          };
+          fileSystems."/mnt/move" = {
+            device = "/dev/disk/by-label/tree_move";
+            fsType = "ntfs-3g";
+            options = [ "rw" "uid=cuddles" "nofail" ];
+          };
+          fileSystems."/mnt/huge" = {
+            device = "/dev/disk/by-label/tree_huge";
+            fsType = "btrfs";
           };
         }
         ./configuration.nix
