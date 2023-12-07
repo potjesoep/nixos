@@ -6,6 +6,11 @@
     enable = true;
     driSupport = true;
     driSupport32Bit = true;
+    extraPackages = with pkgs; [
+      vaapiVdpau
+      libvdpau-va-gl
+      nvidia-vaapi-driver
+    ];
   };
 
   # Load nvidia driver for Xorg and Wayland
@@ -37,11 +42,6 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.production;
   };
-
-  # Add nvidia va-api driver for replay-sorcery to work
-  environment.systemPackages = with pkgs; [
-    nvidia-vaapi-driver
-  ];
 
   # Set libva driver name for hardware accelerataed video encoding/decoding
   environment.variables = {
