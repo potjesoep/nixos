@@ -15,4 +15,6 @@
   swapDevices = [
     { device = "/dev/disk/by-label/tree_swap"; }
   ];
+
+  services.fstrim.enable = true;
 }
