@@ -74,7 +74,6 @@
       heroic
       lutris
       mangohud
-      ns-usbloader
       prismlauncher
       protonup-qt
       r2modman
@@ -173,10 +172,7 @@
   };
 
   # add udev rules for ns-usbloader as user
-  services.udev.extraRules = ''
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="057e", ATTRS{idProduct}=="3000", MODE="0666"
-    SUBSYSTEM=="usb", ATTRS{idVendor}=="0955", ATTRS{idProduct}=="7321", MODE="0666"
-  '';
+  programs.ns-usbloader.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
