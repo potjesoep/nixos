@@ -98,13 +98,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    (python3.withPackages(ps: with ps; [ pyusb ]))
     appimage-run
     git
     grc
     htop
     lm_sensors
     pypy3
-    python3
     sddm-kcm
     unzip
     wget
