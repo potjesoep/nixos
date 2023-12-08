@@ -69,6 +69,7 @@
         withTetrioPlus = true;
       })
       bottles
+      fusee-interfacee-tk
       goverlay
       heroic
       lutris
