@@ -28,6 +28,7 @@
       discover
       kate
       localsend
+      maliit-keyboard
       prusa-slicer
       vial
       yakuake
