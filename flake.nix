@@ -10,10 +10,10 @@
       system = "x86_64-linux";
       modules = [
         {
+          networking.hostName = "nixos";
           boot.initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
           boot.kernelModules = [ "it87" ];
           boot.supportedFilesystems = [ "ntfs" ];
-          networking.hostName = "nixos";
           fileSystems."/mnt/more" = {
             device = "/dev/disk/by-label/tree_more";
             fsType = "f2fs";
@@ -44,9 +44,10 @@
       modules = [
         {
           networking.hostName = "nixos-laptop";
+          environment.variables.VDPAU_DRIVER = "radeonsi";
+          services.xserver.xkbVariant = "workman";
           console.earlySetup = true;
           console.useXkbConfig = true;
-          services.xserver.xkbVariant = "workman";
         }
         ./configuration.nix
         ./modules/amd.nix
