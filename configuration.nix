@@ -21,7 +21,13 @@
   users.users.cuddles = {
     isNormalUser = true;
     description = "cuddles";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" "libvirtd" ];
+    extraGroups = [
+      "adbusers"
+      "libvirtd"
+      "networkmanager"
+      "vboxusers"
+      "wheel"
+    ];
     packages = with pkgs; [
       # utilities
       bitwarden
@@ -124,11 +130,14 @@
   ];
   
   # Enable libvirtd, ovmf and virt-manager
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu.ovmf = {
+  virtualisation = {
+    libvirtd = {
       enable = true;
+      qemu.ovmf = {
+        enable = true;
+      };
     };
+    virtualbox.host.enable = true;
   };
   programs.virt-manager.enable = true;
   
