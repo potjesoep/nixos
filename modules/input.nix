@@ -1,3 +1,5 @@
+{ lib, ...}:
+
 {
   # Configure keymap in X11
   services.xserver = {
