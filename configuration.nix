@@ -1,19 +1,6 @@
 { pkgs, ... }:
 
 {
-  # Enable nix command and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Auto optimize nix store
-  nix.optimise.automatic = true;
-
-  # Auto garbage-collect nix store older than 30days every week
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -191,15 +178,6 @@
 
   # List services that you want to enable:
 
-  # Enable syncthing
-  services.syncthing = {
-    enable = true;
-    user = "cuddles";
-    configDir = "/home/cuddles/.config/syncthing"; # Folder for Syncthing's settings and keys
-    dataDir = "/home/cuddles/.config/syncthing/db"; # Folder for Syncthing's database
-    openDefaultPorts = true;
-  };
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
@@ -216,5 +194,4 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "23.05"; # Did you read the comment?
-
 }

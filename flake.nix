@@ -33,8 +33,10 @@
         ./modules/boot.nix
         ./modules/desktop.nix
         ./modules/disks.nix
+        ./modules/input.nix
         ./modules/locale.nix
         ./modules/networking.nix
+        ./modules/nix.nix
         ./modules/nvidia.nix
         ./modules/pci-passthrough.nix
       ];
@@ -54,8 +56,10 @@
         ./modules/boot.nix
         ./modules/desktop.nix
         ./modules/disks.nix
+        ./modules/input.nix
         ./modules/locale.nix
         ./modules/networking.nix
+        ./modules/nix.nix
       ];
     };
   };
