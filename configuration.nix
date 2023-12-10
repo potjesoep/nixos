@@ -34,7 +34,7 @@
         enableWideVine = true;
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
-      schildichat-desktop
+      fluffychat
       signal-desktop
       telegram-desktop
       whatsapp-for-linux
