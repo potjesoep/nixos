@@ -27,6 +27,7 @@
       bitwarden
       discover
       kate
+      libreoffice-qt
       localsend
       maliit-keyboard
       prusa-slicer
