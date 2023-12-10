@@ -25,7 +25,6 @@
       "adbusers"
       "libvirtd"
       "networkmanager"
-      "vboxusers"
       "wheel"
     ];
     packages = with pkgs; [
@@ -55,10 +54,10 @@
       # media
       (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
-	  looking-glass-obs
-	  obs-vaapi
-	  obs-vkcapture
+          looking-glass-obs
           obs-pipewire-audio-capture
+          obs-vaapi
+          obs-vkcapture
           wlrobs
         ];
       })
@@ -130,14 +129,11 @@
   ];
   
   # Enable libvirtd, ovmf and virt-manager
-  virtualisation = {
-    libvirtd = {
+  virtualisation.libvirtd = {
+    enable = true;
+    qemu.ovmf = {
       enable = true;
-      qemu.ovmf = {
-        enable = true;
-      };
     };
-    virtualbox.host.enable = true;
   };
   programs.virt-manager.enable = true;
   
