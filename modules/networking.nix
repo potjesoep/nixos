@@ -39,4 +39,13 @@
     (lib.mkBefore [ "mdns4_minimal [NOTFOUND=return]" ]) # before resolve
     (lib.mkAfter [ "mdns4" ]) # after dns
   ]);
+
+  # Enable syncthing
+  services.syncthing = {
+    enable = true;
+    user = "cuddles";
+    configDir = "/home/cuddles/.config/syncthing"; # Folder for Syncthing's settings and keys
+    dataDir = "/home/cuddles/.config/syncthing/db"; # Folder for Syncthing's database
+    openDefaultPorts = true;
+  };
 }

@@ -62,12 +62,6 @@
     MOZ_DISABLE_RDD_SANDBOX = "1";
   };
 
-  # Configure keymap in X11
-  services.xserver = {
-    layout = "us";
-    xkbVariant = lib.mkDefault "euro";
-  };
-
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -86,14 +80,5 @@
     # use the example session manager (no others are packaged yet so this is enabled by default,
     # no need to redefine it in your config for now)
     #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput = {
-    enable = true;
-    # disabling mouse acceleration
-    mouse = {
-      accelProfile = "flat";
-    };
   };
 }
