@@ -34,6 +34,7 @@
         enableWideVine = true;
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
+      cinny-desktop
       fluffychat
       signal-desktop
       telegram-desktop
