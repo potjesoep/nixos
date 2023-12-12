@@ -70,7 +70,10 @@
       mangohud
       prismlauncher
       protonup-qt
-      r2modman
+      # TODO: remove electron override once package with new electron version gets merged
+      (pkgs.r2modman.override {
+        electron = pkgs.electron;
+      })
       steamtinkerlaunch
       vintagestory
       vkbasalt
