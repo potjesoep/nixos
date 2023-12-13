@@ -35,7 +35,6 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
-      fluffychat
       signal-desktop
       telegram-desktop
       whatsapp-for-linux
