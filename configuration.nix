@@ -149,11 +149,14 @@
   # Enable kde partition manager
   programs.partition-manager.enable = true;
 
-  # Set fish as default shell for all users
-  programs.fish.enable = true;
+  # Set fish as default shell for all users and enable fish in nix-shell and nix run
+  programs.fish = {
+    enable = true;
+    promptInit = ''
+      ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
+    '';
+  };
   users.defaultUserShell = pkgs.fish;
-  # Use fish as the default shell for the nix-shell command, disabled because it breaks nix-shell
-  #environment.variables.NIX_BUILD_SHELL = "fish";
 
   # Enable neovim and set as default editor
   programs.neovim = {
