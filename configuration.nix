@@ -68,6 +68,8 @@
       })
       bottles
       fusee-interfacee-tk
+      gamemode
+      gamescope
       goverlay
       heroic
       lutris
