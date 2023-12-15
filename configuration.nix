@@ -62,6 +62,10 @@
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
       })
+      # TODO: remove electron override once package with new electron version gets merged
+      (pkgs.r2modman.override {
+        electron = pkgs.electron;
+      })
       bottles
       fusee-interfacee-tk
       goverlay
@@ -70,11 +74,8 @@
       mangohud
       prismlauncher
       protonup-qt
-      # TODO: remove electron override once package with new electron version gets merged
-      (pkgs.r2modman.override {
-        electron = pkgs.electron;
-      })
       steamtinkerlaunch
+      urbanterror
       vintagestory
       vkbasalt
       wineWowPackages.waylandFull
