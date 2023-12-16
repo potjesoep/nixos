@@ -53,6 +53,7 @@
       mpv
       nicotine-plus
       qbittorrent
+      spicetify-cli
       spotify
       syncplay
       syncthingtray
