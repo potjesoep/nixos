@@ -50,6 +50,7 @@
       })
       blender
       kdenlive
+      mpris-scrobbler
       mpv
       nicotine-plus
       qbittorrent
