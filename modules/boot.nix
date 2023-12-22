@@ -7,7 +7,7 @@
 
   # Bootloader.
   boot.loader = {
-    timeout = 1;
+    timeout = 3;
     efi = {
       canTouchEfiVariables = true;
     };
