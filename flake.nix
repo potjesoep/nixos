@@ -31,6 +31,10 @@
             device = "/dev/disk/by-label/tree_huge";
             fsType = "btrfs";
           };
+          systemd.targets.sleep.enable = false;
+          systemd.targets.suspend.enable = false;
+          systemd.targets.hibernate.enable = false;
+          systemd.targets.hybrid-sleep.enable = false;
         }
         ./configuration.nix
         ./modules/amd.nix
