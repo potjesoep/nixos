@@ -35,6 +35,7 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
+      jami
       signal-desktop
       telegram-desktop
       whatsapp-for-linux
