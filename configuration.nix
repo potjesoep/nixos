@@ -20,7 +20,8 @@
       discover
       kate
       libreoffice-qt
-      localsend
+      # TODO: reenable once build failure is fixed
+      #localsend
       maliit-keyboard
       prusa-slicer
       vial
