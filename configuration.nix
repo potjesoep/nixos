@@ -18,6 +18,7 @@
       # utilities
       bitwarden
       discover
+      gparted
       kate
       libreoffice-qt
       # TODO: reenable once build failure is fixed
@@ -113,6 +114,7 @@
     xclip
     # steamtinkerlaunch deps
     xdotool
+    xorg.xhost
     xorg.xwininfo
     xxd
     yad
