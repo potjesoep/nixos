@@ -21,8 +21,7 @@
       gparted
       kate
       libreoffice-qt
-      # TODO: reenable once build failure is fixed
-      #localsend
+      localsend
       maliit-keyboard
       prusa-slicer
       vial
