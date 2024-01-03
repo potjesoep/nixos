@@ -4,13 +4,10 @@
   # Enable networking and bluetooth
   networking = {
     networkmanager.enable = true;
-    #wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
-    # (the default) this is the recommended approach. When using systemd-networkd it's
-    # still possible to use this option, but it's recommended to use it in conjunction
-    # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
+    # Enables DHCP on each ethernet and wireless interface.
     useDHCP = lib.mkDefault true;
-    # interfaces.wlp1s0.useDHCP = lib.mkDefault true;
+    # ports for nicotine-plus/soulseek
+    firewall.allowedTCPPorts = [ 2234 2235 2236 2237 2238 2239 ];
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
