@@ -105,6 +105,7 @@
     grc
     htop
     lm_sensors
+    p7zip
     pypy3
     sddm-kcm
     unzip
