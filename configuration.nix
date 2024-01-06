@@ -177,8 +177,11 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
-  # add udev rules for ns-usbloader as user
+  # add udev rules for ns-usbloader as user and sysdvr as user
   programs.ns-usbloader.enable = true;
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="4ee0", MODE="0666"
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

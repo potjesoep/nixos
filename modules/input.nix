@@ -17,4 +17,5 @@
   };
 
   hardware.xpadneo.enable = true;
+  hardware.steam-hardware.enable = true;
 }
