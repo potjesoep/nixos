@@ -18,6 +18,7 @@
       # utilities
       bitwarden
       discover
+      filelight
       gparted
       kate
       libreoffice-qt
