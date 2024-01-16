@@ -81,7 +81,8 @@
       urbanterror
       vintagestory
       vkbasalt
-      wineWowPackages.waylandFull
+      wineWowPackages.stagingFull
+      winetricks
     ];
   };
 
