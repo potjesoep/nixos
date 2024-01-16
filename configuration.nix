@@ -36,6 +36,7 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
+      floorp
       jami
       signal-desktop
       telegram-desktop
