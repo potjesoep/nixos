@@ -8,6 +8,7 @@
     useDHCP = lib.mkDefault true;
     # ports for nicotine-plus/soulseek
     firewall.allowedTCPPorts = [ 2234 2235 2236 2237 2238 2239 ];
+    firewall.allowedUDPPorts = [ 8001 ];
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
