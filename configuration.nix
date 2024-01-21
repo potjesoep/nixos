@@ -115,6 +115,12 @@
     wget
     wl-clipboard
     xclip
+    # kde system info deps
+    clinfo
+    glxinfo
+    pciutils
+    vulkan-tools
+    wayland-utils
     # steamtinkerlaunch deps
     xdotool
     xorg.xhost
