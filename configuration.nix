@@ -26,7 +26,6 @@
       maliit-keyboard
       prusa-slicer
       vial
-      yakuake
       # online
       (pkgs.discord.override {
         withOpenASAR = true;
@@ -37,8 +36,6 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
-      floorp
-      jami
       signal-desktop
       telegram-desktop
       whatsapp-for-linux
