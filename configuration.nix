@@ -22,6 +22,7 @@
       gparted
       kate
       libreoffice-qt
+      linux-wifi-hotspot
       localsend
       maliit-keyboard
       prusa-slicer
