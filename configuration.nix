@@ -51,6 +51,7 @@
         ];
       })
       blender
+      chatterino2
       kdenlive
       mpris-scrobbler
       mpv
@@ -58,6 +59,7 @@
       qbittorrent
       spicetify-cli
       spotify
+      streamlink
       syncplay
       syncthingtray
       vlc
