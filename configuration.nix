@@ -53,6 +53,7 @@
       blender
       chatterino2
       kdenlive
+      krita
       mpris-scrobbler
       mpv
       nicotine-plus
