@@ -2,9 +2,9 @@
 
 {
   # Configure keymap in X11
-  services.xserver = {
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = lib.mkDefault "euro";
+    variant = lib.mkDefault "euro";
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
