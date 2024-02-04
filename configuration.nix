@@ -108,6 +108,7 @@
     appimage-run
     git
     grc
+    guile
     htop
     lm_sensors
     p7zip
