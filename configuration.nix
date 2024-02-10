@@ -40,6 +40,7 @@
       protonvpn-gui
       signal-desktop
       telegram-desktop
+      vesktop
       whatsapp-for-linux
       # media
       (pkgs.wrapOBS {
