@@ -110,6 +110,7 @@
     git
     grc
     guile
+    home-manager
     htop
     lm_sensors
     p7zip
