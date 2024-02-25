@@ -6,4 +6,6 @@
   services.xserver.xkb.variant = "workman";
   console.earlySetup = true;
   console.useXkbConfig = true;
+  services.power-profiles-daemon.enable = false;
+  services.tlp.enable = true;
 }
