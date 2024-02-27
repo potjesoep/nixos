@@ -4,19 +4,18 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
-    master.url = "github:nixos/nixpkgs/master";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, unstable, master, ... }@inputs:
+  outputs = { self, nixpkgs, unstable, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit unstable master; };
+        specialArgs = { inherit unstable; };
         modules = [
           ./configuration.nix
           ./machines/nixos.nix
@@ -35,7 +34,7 @@
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit unstable master; };
+        specialArgs = { inherit unstable; };
         modules = [
           ./configuration.nix
           ./machines/nixos-laptop.nix

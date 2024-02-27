@@ -1,4 +1,4 @@
-{ pkgs, unstable, master, ... }:
+{ pkgs, unstable, ... }:
 
 {
   # Allow unfree packages
