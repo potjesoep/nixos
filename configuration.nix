@@ -71,6 +71,7 @@
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
       })
+      (pkgs.callPackage ./pkgs/hid-fanatecff-tools {})
       bottles
       fusee-interfacee-tk
       gamemode
