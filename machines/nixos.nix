@@ -12,7 +12,7 @@ in
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
     supportedFilesystems = [ "ntfs" ];
   };
-  services.udev.packages = [ fanatecff ];
+  services.udev.packages = [ fanatecff pkgs.oversteer ];
   fileSystems = {
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";

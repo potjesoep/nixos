@@ -71,7 +71,7 @@
       (pkgs.tetrio-desktop.override {
         withTetrioPlus = true;
       })
-      (pkgs.callPackage ./pkgs/hid-fanatecff-tools {})
+      #(pkgs.callPackage ./pkgs/hid-fanatecff-tools {})
       bottles
       fusee-interfacee-tk
       gamemode
@@ -80,6 +80,7 @@
       heroic
       lutris
       mangohud
+      oversteer
       prismlauncher
       protonup-qt
       r2modman
