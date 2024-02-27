@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, unstable, master, ... }:
 
 {
   # Allow unfree packages
@@ -52,7 +52,7 @@
           wlrobs
         ];
       })
-      blender
+      unstable.legacyPackages."${pkgs.system}".blender
       chatterino2
       kdenlive
       krita
