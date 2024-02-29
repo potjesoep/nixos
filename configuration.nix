@@ -52,7 +52,7 @@
           wlrobs
         ];
       })
-      unstable.legacyPackages."${pkgs.system}".blender
+      blender
       chatterino2
       kdenlive
       krita
