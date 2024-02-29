@@ -22,9 +22,9 @@
       user = "cuddles";
     };
     # Use wayland plasma session by default
-    defaultSession = "plasmawayland";
+    defaultSession = "plasma";
   };
-  services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
 
   # Enable KDE Connect
   programs.kdeconnect.enable = true;
@@ -52,7 +52,7 @@
       "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
     # Already enabled by enabling plasma
-    #nativeMessagingHosts.packages = [ pkgs.plasma5Packages.plasma-browser-integration ];
+    #nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
   };
 
   # Fix wayland black screens
