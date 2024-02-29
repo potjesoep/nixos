@@ -37,10 +37,10 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
+      dino
       protonvpn-gui
       signal-desktop
       telegram-desktop
-      vesktop
       whatsapp-for-linux
       # media
       (pkgs.wrapOBS {
