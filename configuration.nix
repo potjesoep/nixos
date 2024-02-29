@@ -82,6 +82,7 @@
       mangohud
       oversteer
       prismlauncher
+      protontricks
       protonup-qt
       r2modman
       steamtinkerlaunch
