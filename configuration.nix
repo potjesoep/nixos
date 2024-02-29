@@ -123,6 +123,7 @@
     wl-clipboard
     xclip
     # kde system info deps
+    aha
     clinfo
     glxinfo
     pciutils
