@@ -67,30 +67,6 @@
       syncthingtray
       vlc
       xwaylandvideobridge
-      # gaming
-      (pkgs.tetrio-desktop.override {
-        withTetrioPlus = true;
-      })
-      #(pkgs.callPackage ./pkgs/hid-fanatecff-tools {})
-      bottles
-      fusee-interfacee-tk
-      gamemode
-      gamescope
-      goverlay
-      heroic
-      lutris
-      mangohud
-      oversteer
-      prismlauncher
-      protontricks
-      protonup-qt
-      r2modman
-      steamtinkerlaunch
-      urbanterror
-      vintagestory
-      vkbasalt
-      wineWowPackages.stagingFull
-      winetricks
     ];
   };
 
@@ -186,13 +162,6 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
-  };
-
-  # Install steam with firewall rules
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
   # add udev rules for ns-usbloader as user and sysdvr as user
