@@ -7,7 +7,7 @@
     # Enables DHCP on each ethernet and wireless interface.
     useDHCP = lib.mkDefault true;
     # ports for nicotine-plus/soulseek
-    firewall.allowedTCPPorts = [ 2234 2235 2236 2237 2238 2239 ];
+    firewall.allowedTCPPorts = [ 2234 2235 2236 2237 2238 2239 42000 42001 ];
     firewall.allowedUDPPorts = [ 8001 ];
   };
   hardware.bluetooth.enable = true; # enables support for Bluetooth
