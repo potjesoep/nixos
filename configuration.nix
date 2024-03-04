@@ -17,6 +17,7 @@
     packages = with pkgs; [
       # utilities
       bitwarden
+      cinnamon.warpinator
       discover
       filelight
       gparted
@@ -95,6 +96,7 @@
     p7zip
     pypy3
     sddm-kcm
+    unrar
     unzip
     wget
     wl-clipboard
