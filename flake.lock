@@ -40,8 +40,7 @@
       "inputs": {
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "scrumplex": "scrumplex",
-        "unstable": "unstable"
+        "scrumplex": "scrumplex"
       }
     },
     "scrumplex": {
@@ -56,22 +55,6 @@
       "original": {
         "owner": "Scrumplex",
         "ref": "pkgs/v4l2loopback/fix-kernel-6.8",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "unstable": {
-      "locked": {
-        "lastModified": 1710346304,
-        "narHash": "sha256-vwoyBoCovK7+vdbCYqL9MssoFQjaXtZN8sElcjUdbx8=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "a0906f14161a5c5792e9883117b9471f5bf6df72",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixpkgs-unstable",
         "repo": "nixpkgs",
         "type": "github"
       }

@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     scrumplex.url = "github:Scrumplex/nixpkgs/pkgs/v4l2loopback/fix-kernel-6.8";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -11,12 +10,12 @@
     };
   };
 
-  outputs = { self, nixpkgs, unstable, scrumplex, ... }@inputs:
+  outputs = { self, nixpkgs, scrumplex, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit unstable scrumplex; };
+        specialArgs = { inherit scrumplex; };
         modules = [
           ./configuration.nix
           ./machines/nixos.nix
@@ -36,7 +35,7 @@
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit unstable scrumplex; };
+        specialArgs = { inherit scrumplex; };
         modules = [
           ./configuration.nix
           ./machines/nixos-laptop.nix
