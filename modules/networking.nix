@@ -28,15 +28,9 @@
   # Enable avahi with .local domain name resolution
   services.avahi = {
     enable = true;
-    # doesn't work for some reason, see below for ipv4 only which does work
-    #nssmdns = true;
+    nssmdns = true;
     openFirewall = true;
   };
-  system.nssModules = lib.optional true pkgs.nssmdns;
-  system.nssDatabases.hosts = lib.optionals true (lib.mkMerge [
-    (lib.mkBefore [ "mdns4_minimal [NOTFOUND=return]" ]) # before resolve
-    (lib.mkAfter [ "mdns4" ]) # after dns
-  ]);
 
   # Enable syncthing
   services.syncthing = {
