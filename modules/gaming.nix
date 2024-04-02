@@ -4,7 +4,7 @@
   users.users.cuddles.packages = with pkgs; [
     # gaming
     (pkgs.tetrio-desktop.override {
-      withTetrioPlus = true;
+      #withTetrioPlus = true;
     })
     bottles
     fusee-interfacee-tk
@@ -12,7 +12,7 @@
     gamescope
     goverlay
     heroic
-    itch
+    #itch
     lutris
     mangohud
     oversteer
