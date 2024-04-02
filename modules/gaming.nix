@@ -12,7 +12,7 @@
     gamescope
     goverlay
     heroic
-    #itch
+    itch
     lutris
     mangohud
     oversteer
