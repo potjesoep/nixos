@@ -40,7 +40,6 @@
           ./modules/boot.nix
           ./modules/desktop.nix
           ./modules/disks.nix
-          ./modules/gaming.nix
           ./modules/input.nix
           ./modules/locale.nix
           ./modules/networking.nix

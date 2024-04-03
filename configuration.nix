@@ -93,7 +93,7 @@
     htop
     lm_sensors
     p7zip
-    pypy3
+    #pypy3
     sddm-kcm
     unrar
     unzip
