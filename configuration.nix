@@ -53,6 +53,7 @@
       })
       blender
       chatterino2
+      inkscape
       kdenlive
       krita
       mpris-scrobbler
