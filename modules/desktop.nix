@@ -55,6 +55,17 @@
     #nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
   };
 
+  # kde system info deps
+  environment.systemPackages = with pkgs; [
+    aha
+    clinfo
+    glxinfo
+    pciutils
+    quota
+    vulkan-tools
+    wayland-utils
+  ];
+
   # Fix wayland black screens
   environment.variables = {
     NIXOS_OZONE_WL = "1";

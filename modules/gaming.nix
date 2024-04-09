@@ -28,6 +28,16 @@
     winetricks
   ];
 
+
+  # steamtinkerlaunch deps
+  environment.systemPackages = with pkgs; [
+    xdotool
+    xorg.xhost
+    xorg.xwininfo
+    xxd
+    yad
+  ];
+
   # Install steam with firewall rules
   programs.steam = {
     enable = true;

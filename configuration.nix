@@ -100,19 +100,6 @@
     wget
     wl-clipboard
     xclip
-    # kde system info deps
-    aha
-    clinfo
-    glxinfo
-    pciutils
-    vulkan-tools
-    wayland-utils
-    # steamtinkerlaunch deps
-    xdotool
-    xorg.xhost
-    xorg.xwininfo
-    xxd
-    yad
     # virtualization
     OVMF
     gnome.gnome-boxes
