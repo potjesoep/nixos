@@ -33,9 +33,17 @@
       (pkgs.ungoogled-chromium.override {
         enableWideVine = true;
       })
+      (pkgs.gajim.override {
+        enableJingle = true;
+        enableE2E = true;
+        enableSecrets = true;
+        enableRST = true;
+        enableSpelling = true;
+        enableUPnP = true;
+        enableAppIndicator = true;
+      })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       cinny-desktop
-      dino
       protonvpn-gui
       signal-desktop
       telegram-desktop
