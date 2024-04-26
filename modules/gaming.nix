@@ -6,15 +6,16 @@
     (pkgs.tetrio-desktop.override {
       #withTetrioPlus = true;
     })
+    #itch
     bottles
     fusee-interfacee-tk
     gamemode
     gamescope
     goverlay
     heroic
-    #itch
     lutris
     mangohud
+    minetest
     oversteer
     prismlauncher
     protontricks
