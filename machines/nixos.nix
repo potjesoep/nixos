@@ -10,6 +10,7 @@ in
     extraModulePackages = [ fanatecff ];
     initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
+    initrd.luks.devices."crypt_five".device = "/dev/disk/by-partlabel/part_five";
     supportedFilesystems = [ "ntfs" ];
   };
   services.udev.packages = [ fanatecff pkgs.oversteer ];
@@ -29,6 +30,10 @@ in
     };
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";
+      fsType = "f2fs";
+    };
+    "/mnt/five" = {
+      device = "/dev/disk/by-label/tree_five";
       fsType = "f2fs";
     };
   };
