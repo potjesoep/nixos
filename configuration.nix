@@ -23,6 +23,7 @@
       linux-wifi-hotspot
       localsend
       maliit-keyboard
+      okteta
       prusa-slicer
       vial
       # online
