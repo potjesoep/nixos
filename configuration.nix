@@ -129,6 +129,9 @@
   # Enable adb
   programs.adb.enable = true;
 
+  # Enable wireshark
+  programs.wireshark.enable = true;
+
   # Add appimages as a binary type to easily run them
   boot.binfmt.registrations.appimage = {
     wrapInterpreterInShell = false;
