@@ -17,6 +17,7 @@
       cinnamon.warpinator
       discover
       filelight
+      filezilla
       gparted
       kate
       libreoffice-qt
