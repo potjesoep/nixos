@@ -4,7 +4,7 @@
   users.users.cuddles.packages = with pkgs; [
     # gaming
     (pkgs.tetrio-desktop.override {
-      #withTetrioPlus = true;
+      withTetrioPlus = true;
     })
     #itch
     bottles
@@ -13,9 +13,11 @@
     gamescope
     goverlay
     heroic
+    linux-wifi-hotspot
     lutris
     mangohud
     minetest
+    mono
     oversteer
     prismlauncher
     protontricks
