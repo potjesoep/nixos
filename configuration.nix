@@ -72,7 +72,7 @@
       qbittorrent
       spicetify-cli
       spotify
-      streamlink
+      #streamlink
       syncplay
       syncthingtray
       vlc
