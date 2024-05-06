@@ -29,6 +29,7 @@
     vkbasalt
     wineWowPackages.stagingFull
     winetricks
+    xonotic
   ];
 
 
