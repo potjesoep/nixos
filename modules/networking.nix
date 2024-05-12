@@ -14,14 +14,25 @@
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   # Add bluetooth audio codec support
-  services.pipewire.wireplumber.extraLuaConfig.bluetooth."51-bluez-config" = ''
-    bluez_monitor.properties = {
-      ["bluez5.enable-sbc-xq"] = true,
-      ["bluez5.enable-msbc"] = true,
-      ["bluez5.enable-hw-volume"] = true,
-      ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
-    }
-  '';
+  services.pipewire.wireplumber.configPackages = [
+	(pkgs.writeTextDir "share/wireplumber/bluetooth.lua.d/51-bluez-config.lua" ''
+		bluez_monitor.properties = {
+			["bluez5.enable-sbc-xq"] = true,
+			["bluez5.enable-msbc"] = true,
+			["bluez5.enable-hw-volume"] = true,
+			["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+		}
+	'')
+  ];
+  # TODO: enable once this setting gets merged
+  #services.pipewire.wireplumber.extraLuaConfig.bluetooth."51-bluez-config" = ''
+  #  bluez_monitor.properties = {
+  #    ["bluez5.enable-sbc-xq"] = true,
+  #    ["bluez5.enable-msbc"] = true,
+  #    ["bluez5.enable-hw-volume"] = true,
+  #    ["bluez5.headset-roles"] = "[ hsp_hs hsp_ag hfp_hf hfp_ag ]"
+  #  }
+  #'';
 
   # Enable avahi with .local domain name resolution
   services.avahi = {
