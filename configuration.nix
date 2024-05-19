@@ -7,6 +7,9 @@
     description = "cuddles";
     extraGroups = [
       "adbusers"
+      "input"
+      "kvm"
+      "libvirt"
       "libvirtd"
       "networkmanager"
       "wheel"
