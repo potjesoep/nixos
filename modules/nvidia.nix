@@ -1,6 +1,11 @@
 { config, pkgs, ...}:
 
 {
+  # Kwin explicit sync patch
+  nixpkgs.overlays = [
+    (import ../overlays/kwin)
+  ];
+
   # Enable OpenGL
   hardware.opengl = {
     enable = true;
