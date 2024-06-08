@@ -1,11 +1,6 @@
 { pkgs, lib, ... }:
 
 {
-  # Kwin explicit sync patch
-  nixpkgs.overlays = [
-    (import ../overlays/kwin)
-  ];
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
