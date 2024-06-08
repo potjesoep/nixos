@@ -116,6 +116,9 @@
     wget
     wl-clipboard
     xclip
+    # haskell
+    ghc
+    haskell-language-server
     # virtualization
     OVMF
     gnome.gnome-boxes
