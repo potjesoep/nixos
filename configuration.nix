@@ -17,7 +17,7 @@
     packages = with pkgs; [
       # utilities
       bitwarden
-      cinnamon.warpinator
+      warpinator
       discover
       filelight
       filezilla
