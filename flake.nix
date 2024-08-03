@@ -7,9 +7,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.90.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, lix-module, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -28,7 +32,8 @@
           ./modules/nix.nix
           ./modules/nvidia.nix
           ./modules/pci-passthrough.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
@@ -45,7 +50,8 @@
           ./modules/locale.nix
           ./modules/networking.nix
           ./modules/nix.nix
-          inputs.home-manager.nixosModules.default
+          home-manager.nixosModules.default
+          lix-module.nixosModules.default
         ];
       };
     };
