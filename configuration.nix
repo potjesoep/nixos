@@ -48,7 +48,8 @@
         enableAppIndicator = true;
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
-      cinny-desktop
+      #TODO: comment out when it works again
+      #cinny-desktop
       protonvpn-gui
       signal-desktop
       telegram-desktop
