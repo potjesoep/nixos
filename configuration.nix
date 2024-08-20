@@ -17,12 +17,12 @@
     packages = with pkgs; [
       # utilities
       bitwarden
-      warpinator
       discover
       filelight
       filezilla
       gparted
       kate
+      kgpg
       libreoffice-qt
       linux-wifi-hotspot
       localsend
@@ -30,6 +30,7 @@
       okteta
       prusa-slicer
       vial
+      warpinator
       # online
       (pkgs.discord.override {
         withOpenASAR = true;
