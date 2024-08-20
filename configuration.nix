@@ -49,8 +49,11 @@
         enableAppIndicator = true;
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
-      #TODO: comment out when it works again
+      # All Matrix clients suck apparently
       #cinny-desktop
+      #element-desktop
+      #fluffychat
+      #nheko
       protonvpn-gui
       signal-desktop
       telegram-desktop
