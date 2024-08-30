@@ -54,6 +54,7 @@
       #element-desktop
       #fluffychat
       #nheko
+      nextcloud
       protonvpn-gui
       signal-desktop
       telegram-desktop
