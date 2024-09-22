@@ -17,10 +17,10 @@
       };
     };
     # Enable automatic login for the user. don't enable with sddm as it does not work
-    autoLogin = {
-      enable = true;
-      user = "cuddles";
-    };
+    #autoLogin = {
+    #  enable = true;
+    #  user = "cuddles";
+    #};
     # Use wayland plasma session by default
     defaultSession = "plasma";
   };
@@ -74,7 +74,12 @@
   };
 
   # Enable CUPS to print documents.
-  services.printing.enable = true;
+  services.printing = {
+    enable = true;
+    drivers = with pkgs; [
+      cnijfilter2
+    ];
+  };
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;

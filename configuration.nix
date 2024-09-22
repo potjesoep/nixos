@@ -115,7 +115,8 @@
     htop
     lm_sensors
     p7zip
-    #pypy3
+    pypy3
+    sbctl
     sddm-kcm
     unrar
     unzip
@@ -124,7 +125,7 @@
     xclip
     # virtualization
     OVMF
-    gnome.gnome-boxes
+    gnome-boxes
     qemu
   ];
   
