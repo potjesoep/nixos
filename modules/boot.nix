@@ -1,4 +1,4 @@
-{ config, pkgs, modulesPath, ... }:
+{ config, pkgs, modulesPath, lib, ... }:
 
 {
   imports = [
@@ -12,9 +12,13 @@
       canTouchEfiVariables = true;
     };
     systemd-boot = {
-      enable = true;
+      enable = lib.mkForce false;
       consoleMode = "max";
     };
+  };
+  boot.lanzaboote = {
+    enable = true;
+    pkiBundle = "/etc/secureboot";
   };
 
   # Enable plymouth for fancy boot screen.
