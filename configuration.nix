@@ -104,9 +104,22 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     (python3.withPackages(ps: with ps; [
-      pyusb
+      capstone
+      colorama
       cryptography
+      docopt
+      keystone-engine
+      lxml
+      passlib
+      pycryptodome
+      pycryptodomex
+      pyserial
+      pyusb
+      qrcode
+      requests
+      wheel
     ]))
+    edl
     appimage-run
     git
     grc
