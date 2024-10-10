@@ -82,6 +82,7 @@
       spicetify-cli
       spotify
       streamlink
+      sublime-music
       syncplay
       syncthingtray
       vlc
