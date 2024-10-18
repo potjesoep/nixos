@@ -50,10 +50,7 @@
       })
       (pkgs.callPackage ./pkgs/krisp-patch {})
       # All Matrix clients suck apparently
-      #cinny-desktop
-      #element-desktop
-      #fluffychat
-      #nheko
+      element-desktop
       nextcloud-client
       protonvpn-gui
       signal-desktop
