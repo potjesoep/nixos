@@ -17,11 +17,11 @@
     packages = with pkgs; [
       # utilities
       bitwarden
-      discover
       filelight
       filezilla
       gparted
       kate
+      kdePackages.discover
       kgpg
       libreoffice-qt
       linux-wifi-hotspot
@@ -134,6 +134,7 @@
     wget
     wl-clipboard
     xclip
+    ntfs3g
     # virtualization
     OVMF
     gnome-boxes
