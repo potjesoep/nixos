@@ -31,6 +31,7 @@
       prusa-slicer
       vial
       warpinator
+      monero-gui
       # online
       (pkgs.discord.override {
         withOpenASAR = true;
@@ -117,7 +118,7 @@
       requests
       wheel
     ]))
-    edl
+    #edl
     appimage-run
     git
     grc
@@ -126,7 +127,7 @@
     htop
     lm_sensors
     p7zip
-    pypy3
+    #pypy3
     sbctl
     sddm-kcm
     unrar
