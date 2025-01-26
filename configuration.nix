@@ -12,6 +12,9 @@
       "libvirt"
       "libvirtd"
       "networkmanager"
+      "plugdev"
+      "qemu"
+      "spice"
       "wheel"
     ];
     packages = with pkgs; [
@@ -118,6 +121,9 @@
       requests
       wheel
     ]))
+    wineWowPackages.waylandFull
+    samba
+    (pkgs.callPackage ./pkgs/winetricks {})
     #edl
     appimage-run
     git
@@ -140,13 +146,32 @@
     OVMF
     gnome-boxes
     qemu
+    swtpm
+    spice-gtk
   ];
   
+  security.wrappers.spice-client-glib-usb-acl-helper = {
+    owner = "root";
+    group = "root";
+    source = "${pkgs.spice-gtk}/bin/spice-client-glib-usb-acl-helper";
+  };
+
   # Enable libvirtd, ovmf and virt-manager
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu.ovmf = {
+  virtualisation = {
+    libvirtd = {
       enable = true;
+      qemu = {
+        package = pkgs.qemu_kvm;
+        runAsRoot = true;
+        swtpm.enable = true;
+        ovmf = {
+          enable = true;
+          packages = [ (pkgs.OVMFFull.override {
+            secureBoot = true;
+            tpmSupport = true;
+          }) ];
+        };
+      };
     };
   };
   programs.virt-manager.enable = true;
@@ -195,6 +220,9 @@
   programs.ns-usbloader.enable = true;
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTRS{idVendor}=="18d1", ATTRS{idProduct}=="4ee0", MODE="0666"
+    SUBSYSTEM=="usb", ATTRS{idVendor}=="091e", ATTRS{idProduct}=="2bc3", MODE="0666", GROUP="plugdev"
+    SUBSYSTEM=="usb", GROUP="users", MODE="0660"
+    SUBSYSTEM=="usb_device", GROUP="users", MODE="0660"
   '';
 
   # Some programs need SUID wrappers, can be configured further or are
