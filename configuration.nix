@@ -30,11 +30,12 @@
       linux-wifi-hotspot
       localsend
       maliit-keyboard
+      monero-gui
       okteta
       prusa-slicer
+      sony-headphones-client
       vial
       warpinator
-      monero-gui
       # online
       (pkgs.discord.override {
         withOpenASAR = true;
