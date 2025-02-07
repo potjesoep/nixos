@@ -170,6 +170,8 @@
           packages = [ (pkgs.OVMFFull.override {
             secureBoot = true;
             tpmSupport = true;
+            tlsSupport = true;
+            httpSupport = true;
           }) ];
         };
       };
