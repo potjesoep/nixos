@@ -16,4 +16,7 @@
     LC_TELEPHONE = "nl_NL.UTF-8";
     LC_TIME = "nl_NL.UTF-8";
   };
+
+  # geoclue2 as location provider
+  location.provider = "geoclue2";
 }

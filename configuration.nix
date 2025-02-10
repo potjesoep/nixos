@@ -37,10 +37,6 @@
       vial
       warpinator
       # online
-      (pkgs.discord.override {
-        withOpenASAR = true;
-        withVencord = true;
-      })
       (pkgs.ungoogled-chromium.override {
         enableWideVine = true;
       })
@@ -53,14 +49,12 @@
         enableUPnP = true;
         enableAppIndicator = true;
       })
-      (pkgs.callPackage ./pkgs/krisp-patch {})
       # All Matrix clients suck apparently
       element-desktop
       nextcloud-client
       protonvpn-gui
       signal-desktop
       telegram-desktop
-      vesktop
       whatsapp-for-linux
       # media
       (pkgs.wrapOBS {

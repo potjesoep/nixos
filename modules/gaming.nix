@@ -30,6 +30,12 @@
     wineWowPackages.stagingFull
     winetricks
     xonotic
+    (pkgs.callPackage ../pkgs/krisp-patch {})
+    (pkgs.discord.override {
+      withOpenASAR = true;
+      withVencord = true;
+    })
+    vesktop
   ];
 
 
