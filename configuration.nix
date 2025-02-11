@@ -49,6 +49,7 @@
         enableUPnP = true;
         enableAppIndicator = true;
       })
+      zoom-us
       # All Matrix clients suck apparently
       element-desktop
       nextcloud-client
