@@ -33,8 +33,9 @@
       monero-gui
       okteta
       prusa-slicer
+      solaar
       sony-headphones-client
-      #varia
+      varia
       vial
       warpinator
       # online
