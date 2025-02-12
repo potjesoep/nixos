@@ -18,4 +18,5 @@
 
   hardware.xpadneo.enable = true;
   hardware.steam-hardware.enable = true;
+  hardware.logitech.wireless.enable = true;
 }
