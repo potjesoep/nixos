@@ -34,6 +34,7 @@
       okteta
       prusa-slicer
       sony-headphones-client
+      varia
       vial
       warpinator
       # online
