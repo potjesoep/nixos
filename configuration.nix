@@ -20,7 +20,7 @@
     packages = with pkgs; [
       # utilities
       bitwarden
-      filelight
+      kdePackages.filelight
       filezilla
       gparted
       kate
