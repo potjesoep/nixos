@@ -17,14 +17,14 @@
       "spice"
       "wheel"
     ];
-    packages = with pkgs; [
+    packages = with pkgs; with kdePackages; [
       # utilities
       bitwarden
-      kdePackages.filelight
+      filelight
       filezilla
       gparted
       kate
-      kdePackages.discover
+      discover
       kgpg
       libreoffice-qt
       linux-wifi-hotspot
@@ -102,7 +102,7 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; with kdePackages; [
     (python3.withPackages(ps: with ps; [
       capstone
       colorama
