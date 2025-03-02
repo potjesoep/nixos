@@ -86,6 +86,7 @@
       syncthingtray
       vlc
       xwaylandvideobridge
+      yt-dlp
     ];
   };
 
