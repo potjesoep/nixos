@@ -37,6 +37,7 @@
     portal = {
       enable = true;
       extraPortals = with pkgs; with kdePackages; [
+        xdg-desktop-portal
         xdg-desktop-portal-wlr
         xdg-desktop-portal-gtk
         xdg-desktop-portal-kde
