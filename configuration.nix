@@ -71,6 +71,7 @@
       })
       blender
       chatterino2
+      fooyin
       inkscape
       kdenlive
       krita
