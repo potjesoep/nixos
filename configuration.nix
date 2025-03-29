@@ -78,6 +78,7 @@
       mpris-scrobbler
       mpv
       nicotine-plus
+      pipe-viewer
       qbittorrent
       spicetify-cli
       spotify
