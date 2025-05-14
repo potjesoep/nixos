@@ -52,6 +52,7 @@
         enableAppIndicator = true;
       })
       zoom-us
+      mullvad-browser
       # All Matrix clients suck apparently
       element-desktop
       nextcloud-client
