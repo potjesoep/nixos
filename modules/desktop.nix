@@ -58,7 +58,8 @@
 
   # install nerdfonts
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.hack
+    nerd-fonts.noto
   ];
 
   # kde system info deps
