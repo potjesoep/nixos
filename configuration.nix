@@ -126,14 +126,17 @@
     (pkgs.callPackage ./pkgs/winetricks {})
     appimage-run
     edl
+    ghostscript
     git
     grc
+    groff
     guile
     home-manager
     htop
     lm_sensors
     ntfs3g
     p7zip
+    pandoc
     pypy3
     samba
     sbctl
