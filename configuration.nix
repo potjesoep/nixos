@@ -132,7 +132,6 @@
     home-manager
     htop
     lm_sensors
-    nerdfonts
     ntfs3g
     p7zip
     pypy3

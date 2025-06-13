@@ -56,6 +56,11 @@
     #nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
   };
 
+  # install nerdfonts
+  fonts.packages = with pkgs; [
+    nerdfonts
+  ];
+
   # kde system info deps
   environment.systemPackages = with pkgs; [
     aha
