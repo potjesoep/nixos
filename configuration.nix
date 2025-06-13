@@ -123,27 +123,28 @@
       requests
       wheel
     ]))
-    wineWowPackages.waylandFull
-    samba
     (pkgs.callPackage ./pkgs/winetricks {})
-    #edl
     appimage-run
+    edl
     git
     grc
     guile
     home-manager
     htop
     lm_sensors
+    nerdfonts
+    ntfs3g
     p7zip
-    #pypy3
+    pypy3
+    samba
     sbctl
     sddm-kcm
     unrar
     unzip
     wget
+    wineWowPackages.waylandFull
     wl-clipboard
     xclip
-    ntfs3g
     # virtualization
     OVMF
     gnome-boxes
