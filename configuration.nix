@@ -123,7 +123,6 @@
       requests
       wheel
     ]))
-    (pkgs.callPackage ./pkgs/winetricks {})
     appimage-run
     edl
     ghostscript
@@ -145,6 +144,7 @@
     unzip
     wget
     wineWowPackages.waylandFull
+    winetricks
     wl-clipboard
     xclip
     # virtualization
