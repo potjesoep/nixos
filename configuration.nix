@@ -136,7 +136,7 @@
     ntfs3g
     p7zip
     pandoc
-    pypy3
+    #pypy3
     samba
     sbctl
     sddm-kcm
