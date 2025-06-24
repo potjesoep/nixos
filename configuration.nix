@@ -123,8 +123,10 @@
       requests
       wheel
     ]))
+    #pypy3
     appimage-run
     edl
+    ffmpeg-full
     ghostscript
     git
     grc
@@ -136,7 +138,6 @@
     ntfs3g
     p7zip
     pandoc
-    #pypy3
     samba
     sbctl
     sddm-kcm
