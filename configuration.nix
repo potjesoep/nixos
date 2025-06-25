@@ -20,11 +20,11 @@
     packages = with pkgs; with kdePackages; [
       # utilities
       bitwarden
+      discover
       filelight
       filezilla
       gparted
       kate
-      discover
       kgpg
       libreoffice-qt
       linux-wifi-hotspot
@@ -32,6 +32,7 @@
       maliit-keyboard
       monero-gui
       okteta
+      openscad
       prusa-slicer
       solaar
       sony-headphones-client
