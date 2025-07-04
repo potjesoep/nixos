@@ -60,7 +60,7 @@
       protonvpn-gui
       signal-desktop
       telegram-desktop
-      whatsapp-for-linux
+      zapzap
       # media
       (pkgs.wrapOBS {
         plugins = with pkgs.obs-studio-plugins; [
