@@ -6,7 +6,7 @@
     (pkgs.tetrio-desktop.override {
       withTetrioPlus = true;
     })
-    #itch
+    itch
     bottles
     fusee-interfacee-tk
     gamemode
