@@ -81,7 +81,10 @@
       (mpv.override {
         scripts = with mpvScripts; [
           mpris
+          quality-menu
           sponsorblock
+          thumbfast
+          uosc
         ];
       })
       nicotine-plus
