@@ -78,7 +78,12 @@
       kdenlive
       krita
       mpris-scrobbler
-      mpv
+      (mpv.override {
+        scripts = with mpvScripts; [
+          mpris
+          sponsorblock
+        ];
+      })
       nicotine-plus
       pipe-viewer
       qbittorrent
