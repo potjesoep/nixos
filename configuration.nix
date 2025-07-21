@@ -54,6 +54,7 @@
       })
       zoom-us
       mullvad-browser
+      librewolf
       # All Matrix clients suck apparently
       element-desktop
       nextcloud-client
