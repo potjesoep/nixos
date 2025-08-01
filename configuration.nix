@@ -79,6 +79,7 @@
       kdenlive
       krita
       mpris-scrobbler
+      puddletag
       (mpv.override {
         scripts = with mpvScripts; [
           mpris
