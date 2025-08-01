@@ -45,6 +45,9 @@
     };
   };
 
+  # enable calendar support
+  programs.kde-pim.merkuro = true;
+
   # Enable plasma browser integration and Make Firefox use the KDE file picker. 
   # Preferences source: https://wiki.archlinux.org/title/firefox#KDE_integration
   programs.firefox = {
