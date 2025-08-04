@@ -80,6 +80,7 @@
       krita
       mpris-scrobbler
       puddletag
+      soundkonverter
       (mpv.override {
         scripts = with mpvScripts; [
           mpris
