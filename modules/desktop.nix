@@ -75,6 +75,8 @@
     aha
     clinfo
     glxinfo
+    kaccounts-integration
+    kaccounts-providers
     pciutils
     quota
     vulkan-tools
