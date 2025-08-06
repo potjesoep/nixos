@@ -71,7 +71,7 @@
   ];
 
   # kde system info deps
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; with kdePackages; [
     aha
     clinfo
     glxinfo
