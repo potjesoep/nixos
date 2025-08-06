@@ -11,13 +11,9 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
-  outputs = { self, nixpkgs, home-manager, lanzaboote, lix-module, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, lanzaboote, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -38,7 +34,6 @@
           ./modules/pci-passthrough.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
-          lix-module.nixosModules.default
         ];
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
@@ -56,7 +51,6 @@
           ./modules/nix.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
-          lix-module.nixosModules.default
         ];
       };
     };
