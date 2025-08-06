@@ -54,4 +54,8 @@
     remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
+
+  # xbox and steam controllers
+  hardware.xpadneo.enable = true;
+  hardware.steam-hardware.enable = true;
 }

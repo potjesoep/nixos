@@ -16,7 +16,6 @@
     };
   };
 
-  hardware.xpadneo.enable = true;
-  hardware.steam-hardware.enable = true;
+  # logitech mice and keyboards
   hardware.logitech.wireless.enable = true;
 }

@@ -79,7 +79,9 @@
       kdenlive
       krita
       mpris-scrobbler
+      playerctl
       puddletag
+      rescrobbled
       soundkonverter
       (mpv.override {
         scripts = with mpvScripts; [

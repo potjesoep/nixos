@@ -1,4 +1,8 @@
+{ pkgs, ... }:
 {
+  # enable lix
+  nix.package = pkgs.lixPackageSets.latest.lix;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
