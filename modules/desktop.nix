@@ -78,6 +78,7 @@
     kaccounts-integration
     kaccounts-providers
     pciutils
+    qtwebengine
     quota
     vulkan-tools
     wayland-utils
