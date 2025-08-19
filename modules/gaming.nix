@@ -9,8 +9,8 @@
     #itch
     #bottles
     #fusee-interfacee-tk
-    gamemode
-    gamescope
+    #gamemode
+    #gamescope
     #goverlay
     #heroic
     #linux-wifi-hotspot
@@ -19,7 +19,7 @@
     #minetest
     #mono
     #oversteer
-    prismlauncher
+    #prismlauncher
     #protontricks
     #protonup-qt
     #r2modman
@@ -27,8 +27,8 @@
     #urbanterror
     #vintagestory
     #vkbasalt
-    wineWowPackages.stagingFull
-    winetricks
+    #wineWowPackages.stagingFull
+    #winetricks
     #xonotic
     #(pkgs.callPackage ../pkgs/krisp-patch {})
     #(pkgs.discord.override {
@@ -40,13 +40,13 @@
 
 
   # steamtinkerlaunch deps
-  environment.systemPackages = with pkgs; [
-    xdotool
-    xorg.xhost
-    xorg.xwininfo
-    xxd
-    yad
-  ];
+  #environment.systemPackages = with pkgs; [
+  #  xdotool
+  #  xorg.xhost
+  #  xorg.xwininfo
+  #  xxd
+  #  yad
+  #];
 
   # Install steam with firewall rules
   #programs.steam = {
@@ -56,6 +56,6 @@
   #};
 
   # xbox and steam controllers
-  hardware.xpadneo.enable = true;
-  hardware.steam-hardware.enable = true;
+  #hardware.xpadneo.enable = true;
+  #hardware.steam-hardware.enable = true;
 }
