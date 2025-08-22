@@ -27,8 +27,6 @@
       kate
       kgpg
       libreoffice-qt
-      linux-wifi-hotspot
-      localsend
       maliit-keyboard
       monero-gui
       okteta
@@ -36,9 +34,6 @@
       prusa-slicer
       solaar
       sony-headphones-client
-      #varia
-      vial
-      warpinator
       # online
       (pkgs.ungoogled-chromium.override {
         enableWideVine = true;
@@ -58,7 +53,6 @@
       # All Matrix clients suck apparently
       element-desktop
       nextcloud-client
-      protonvpn-gui
       signal-desktop
       telegram-desktop
       zapzap
@@ -72,8 +66,6 @@
           wlrobs
         ];
       })
-      blender
-      chatterino2
       fooyin
       inkscape
       kdenlive
@@ -93,11 +85,9 @@
         ];
       })
       nicotine-plus
-      pipe-viewer
       qbittorrent
       spicetify-cli
       spotify
-      streamlink
       sublime-music
       syncplay
       syncthingtray
@@ -121,25 +111,23 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; with kdePackages; [
-    (python3.withPackages(ps: with ps; [
-      capstone
-      colorama
-      cryptography
-      docopt
-      keystone-engine
-      lxml
-      passlib
-      pycryptodome
-      pycryptodomex
-      pyserial
-      pyusb
-      qrcode
-      requests
-      wheel
-    ]))
-    #pypy3
+    #(python3.withPackages(ps: with ps; [
+      #capstone
+      #colorama
+      #cryptography
+      #docopt
+      #keystone-engine
+      #lxml
+      #passlib
+      #pycryptodome
+      #pycryptodomex
+      #pyserial
+      #pyusb
+      #qrcode
+      #requests
+      #wheel
+    #]))
     appimage-run
-    edl
     ffmpeg-full
     ghostscript
     git
