@@ -26,7 +26,7 @@ in
     "/mnt/move" = {
       device = "/dev/disk/by-label/tree_move";
       fsType = "ntfs-3g";
-      options = [ "rw" "uid=cuddles" "nofail" ];
+      options = [ "users" "rw" "uid=cuddles" "nofail" ];
     };
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";
