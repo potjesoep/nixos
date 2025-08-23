@@ -4,8 +4,11 @@
     fsType = "vfat";
   };
 
-  boot.initrd.luks.devices."crypt_root".device = "/dev/disk/by-partlabel/part_root";
-  boot.initrd.luks.devices."crypt_swap".device = "/dev/disk/by-partlabel/part_swap";
+  boot.initrd = {
+    services.lvm.enable = true;
+    luks.devices."crypt_root".device = "/dev/disk/by-partlabel/part_root";
+    luks.devices."crypt_swap".device = "/dev/disk/by-partlabel/part_swap";
+  };
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/tree_root";
