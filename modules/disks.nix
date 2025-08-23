@@ -17,4 +17,5 @@
   ];
 
   services.fstrim.enable = true;
+  services.lvm.enable = true;
 }
