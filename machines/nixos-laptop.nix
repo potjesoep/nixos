@@ -15,7 +15,7 @@
     "/mnt/media" = {
       device = "/dev/mapper/crypt_media";
       fsType = "f2fs";
-      options = [ "rw" "uid=cuddles" "nofail" ];
+      options = [ "users" "rw" "uid=cuddles" "nofail" ];
     };
   };
   networking.hostName = "nixos-laptop";
