@@ -15,7 +15,7 @@
     "/mnt/media" = {
       device = "/dev/disk/by-label/tree_media";
       fsType = "f2fs";
-      options = [ "users" "rw" "uid=cuddles" "nofail" ];
+      options = [ "users" "rw" "nofail" ];
     };
   };
   networking.hostName = "nixos-laptop";
