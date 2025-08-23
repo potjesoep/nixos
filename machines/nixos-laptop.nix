@@ -13,7 +13,7 @@
   };
   fileSystems = {
     "/mnt/media" = {
-      device = "/dev/mapper/crypt_media";
+      device = "/dev/disk/by-label/tree_media";
       fsType = "f2fs";
       options = [ "users" "rw" "uid=cuddles" "nofail" ];
     };
