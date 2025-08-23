@@ -8,7 +8,7 @@
   environment.etc.crypttab = {
     mode = "0600";
     text = ''
-      crypt_media LABEL=tree_media /root/key_media.key nofail
+      crypt_media LABEL=part_media /root/key_media.key nofail
     '';
   };
   fileSystems = {
