@@ -1,12 +1,23 @@
 { config, lib, ... }:
 
 {
-  networking.hostName = "nixos-laptop";
-  environment.variables.VDPAU_DRIVER = "radeonsi";
-  environment.variables.LIBVA_DRIVER_NAME = "radeonsi";
+  boot.initrd.luks.devices."crypt_media".device = "/dev/disk/by-partlabel/part_media";
   console.earlySetup = true;
   console.useXkbConfig = true;
-  services.xserver.xkb.variant = "workman";
+  environment.variables.LIBVA_DRIVER_NAME = "radeonsi";
+  environment.variables.VDPAU_DRIVER = "radeonsi";
+  fileSystems = {
+    "/mnt/media" = {
+      device = "/dev/disk/by-label/tree_media";
+      fsType = "f2fs";
+      options = [
+        "users"
+        "nofail"
+      ];
+    };
+  };
+  networking.hostName = "nixos-laptop";
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
+  services.xserver.xkb.variant = "workman";
 }

@@ -6,11 +6,11 @@ in
 {
   networking.hostName = "nixos";
   boot = {
-    kernelModules = [ "it87" "hid-fanatec" ];
     extraModulePackages = [ fanatecff ];
+    initrd.luks.devices."crypt_five".device = "/dev/disk/by-partlabel/part_five";
     initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
-    initrd.luks.devices."crypt_five".device = "/dev/disk/by-partlabel/part_five";
+    kernelModules = [ "it87" "hid-fanatec" ];
     supportedFilesystems = [ "ntfs" ];
   };
   services.udev.packages = [ fanatecff pkgs.oversteer ];
