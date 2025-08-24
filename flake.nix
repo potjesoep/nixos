@@ -24,7 +24,6 @@
           ./apps/online.nix
           ./apps/sync.nix
           ./apps/utilities.nix
-          ./configuration.nix
           ./hardware/cpu/amd.nix
           ./hardware/disks.nix
           ./hardware/gpu/nvidia.nix
@@ -52,7 +51,6 @@
           ./apps/online.nix
           ./apps/sync.nix
           ./apps/utilities.nix
-          ./configuration.nix
           ./hardware/cpu/amd.nix
           ./hardware/disks.nix
           ./hardware/input.nix
