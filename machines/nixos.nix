@@ -1,19 +1,13 @@
 { pkgs, config, lib, ... }:
 
-let
-  fanatecff = config.boot.kernelPackages.callPackage ../pkgs/hid-fanatecff {};
-in
 {
   networking.hostName = "nixos";
   boot = {
-    extraModulePackages = [ fanatecff ];
     initrd.luks.devices."crypt_five".device = "/dev/disk/by-partlabel/part_five";
     initrd.luks.devices."crypt_more".device = "/dev/disk/by-partlabel/part_more";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
-    kernelModules = [ "it87" "hid-fanatec" ];
     supportedFilesystems = [ "ntfs" ];
   };
-  services.udev.packages = [ fanatecff pkgs.oversteer ];
   fileSystems = {
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";

@@ -19,18 +19,27 @@
       nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./apps/cli.nix
+          ./apps/media.nix
+          ./apps/online.nix
+          ./apps/sync.nix
+          ./apps/utilities.nix
           ./configuration.nix
+          ./hardware/cpu/amd.nix
+          ./hardware/disks.nix
+          ./hardware/gpu/nvidia.nix
+          ./hardware/gpu/pci-passthrough.nix
+          ./hardware/input.nix
+          ./hardware/sound.nix
           ./machines/nixos.nix
-          ./modules/amd.nix
-          ./modules/boot.nix
-          ./modules/desktop.nix
-          ./modules/disks.nix
-          ./modules/input.nix
-          ./modules/locale.nix
-          ./modules/networking.nix
-          ./modules/nix.nix
-          ./modules/nvidia.nix
-          ./modules/pci-passthrough.nix
+          ./system/appformats.nix
+          ./system/boot.nix
+          ./system/desktop.nix
+          ./system/locale.nix
+          ./system/networking.nix
+          ./system/nix.nix
+          ./system/virtualization.nix
+          ./users/cuddles.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
         ];
@@ -38,16 +47,25 @@
       nixos-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./apps/cli.nix
+          ./apps/media.nix
+          ./apps/online.nix
+          ./apps/sync.nix
+          ./apps/utilities.nix
           ./configuration.nix
+          ./hardware/cpu/amd.nix
+          ./hardware/disks.nix
+          ./hardware/input.nix
+          ./hardware/sound.nix
           ./machines/nixos-laptop.nix
-          ./modules/amd.nix
-          ./modules/boot.nix
-          ./modules/desktop.nix
-          ./modules/disks.nix
-          ./modules/input.nix
-          ./modules/locale.nix
-          ./modules/networking.nix
-          ./modules/nix.nix
+          ./system/appformats.nix
+          ./system/boot.nix
+          ./system/desktop.nix
+          ./system/locale.nix
+          ./system/networking.nix
+          ./system/nix.nix
+          ./system/virtualization.nix
+          ./users/cuddles.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
         ];
