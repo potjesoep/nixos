@@ -5,23 +5,21 @@
     home-manager
   ];
 
-  # enable lix
-  nix.package = pkgs.lixPackageSets.latest.lix;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # Enable nix command and flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Auto optimize nix store
-  nix.optimise.automatic = true;
-
-  # Auto garbage-collect nix store older than 30days every week
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
+  # nix settings
+  nix = {
+    package = pkgs.lixPackageSets.latest.lix;
+    settings.experimental-features = [ "nix-command" "flakes" ];
+    optimise.automatic = true;
+    # Auto garbage-collect nix store older than 14days every week
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 14d";
+    };
   };
 
   # This value determines the NixOS release from which the default
