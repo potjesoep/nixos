@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     grc
     sbctl
-    home-manager
     # programming
     #(python3.withPackages(ps: with ps; [
       #capstone
