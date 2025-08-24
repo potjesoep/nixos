@@ -16,10 +16,15 @@
       consoleMode = "max";
     };
   };
+
+  # Secure boot
   boot.lanzaboote = {
     enable = true;
     pkiBundle = "/etc/secureboot";
   };
+  environment.systemPackages = with pkgs; [
+    sbctl
+  ];
 
   # Enable plymouth for fancy boot screen.
   boot.initrd.systemd.enable = true;

@@ -3,7 +3,6 @@
 {
   environment.systemPackages = with pkgs; [
     grc
-    sbctl
     # programming
     #(python3.withPackages(ps: with ps; [
       #capstone
