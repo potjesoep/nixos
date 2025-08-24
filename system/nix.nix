@@ -1,5 +1,10 @@
 { pkgs, ... }:
 {
+  # add home-manager cli
+  environment.systemPackages = with pkgs; [
+    home-manager
+  ];
+
   # enable lix
   nix.package = pkgs.lixPackageSets.latest.lix;
 
