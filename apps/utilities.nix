@@ -8,6 +8,7 @@
     # device utils
     solaar
     sony-headphones-client
+    qmapshack
     # 3d printing
     openscad
     prusa-slicer
