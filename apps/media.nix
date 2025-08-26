@@ -20,7 +20,6 @@
     playerctl
     puddletag
     rescrobbled
-    soundkonverter
     spicetify-cli
     spotify
     sublime-music
