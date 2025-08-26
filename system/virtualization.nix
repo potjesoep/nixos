@@ -19,6 +19,7 @@
 
   # Enable libvirtd, ovmf and virt-manager
   virtualisation = {
+    spiceUSBRedirection.enable = true;
     libvirtd = {
       enable = true;
       qemu = {
