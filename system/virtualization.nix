@@ -8,7 +8,7 @@
     quickemu
     spice-gtk
     swtpm
-    usbredirect
+    usbredir
   ];
 
   security.wrappers.spice-client-glib-usb-acl-helper = {
