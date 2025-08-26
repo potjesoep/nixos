@@ -5,8 +5,10 @@
     OVMF
     gnome-boxes
     qemu
-    swtpm
+    quickemu
     spice-gtk
+    swtpm
+    usbredirect
   ];
 
   security.wrappers.spice-client-glib-usb-acl-helper = {
