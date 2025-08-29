@@ -32,6 +32,7 @@
   boot.plymouth = {
     enable = true;
     theme = "breeze";
+    themePackages = [ pkgs.kdePackages.breeze-plymouth ];
   };
 
   # Use linux_zen
