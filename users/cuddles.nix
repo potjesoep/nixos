@@ -16,6 +16,7 @@
       "plugdev"
       "qemu"
       "spice"
+      "tty"
       "wheel"
     ];
   };
