@@ -6,9 +6,10 @@
     maliit-keyboard
     monero-gui
     # device utils
+    arduino-ide
+    qmapshack
     solaar
     sony-headphones-client
-    qmapshack
     # 3d printing
     openscad
     prusa-slicer
