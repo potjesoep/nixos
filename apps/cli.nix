@@ -31,6 +31,7 @@
     # monitor
     htop
     lm_sensors
+    usbutils
     # download
     git
     wget
