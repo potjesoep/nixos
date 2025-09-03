@@ -5,6 +5,10 @@
   users.users.cuddles = {
     isNormalUser = true;
     description = "cuddles";
+    packages = with pkgs; [
+      rescrobbled
+      mpris-scrobbler
+    ];
     extraGroups = [
       "adbusers"
       "dialout"
