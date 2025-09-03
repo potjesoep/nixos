@@ -20,6 +20,7 @@
       #requests
       #wheel
     #]))
+    python3
     ghostscript
     guile
     # files
