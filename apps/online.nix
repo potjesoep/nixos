@@ -22,6 +22,7 @@
       enableAppIndicator = true;
     })
     element-desktop
+    fluffychat
     signal-desktop
     telegram-desktop
     zapzap
