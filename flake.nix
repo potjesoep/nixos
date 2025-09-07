@@ -11,9 +11,13 @@
       url = "github:nix-community/lanzaboote/v0.4.2";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, home-manager, lanzaboote, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, lanzaboote, spicetify-nix, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -41,7 +45,11 @@
           ./users/cuddles.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
+          spicetify-nix.nixosModules.spicetify
         ];
+        specialArgs = {
+          inherit inputs;
+        };
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -66,7 +74,11 @@
           ./users/cuddles.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
+          spicetify-nix.nixosModules.spicetify
         ];
+        specialArgs = {
+          inherit inputs;
+        };
       };
     };
   };

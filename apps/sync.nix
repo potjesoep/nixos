@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     syncthingtray
     nextcloud-client
+    calibre
   ];
 
   # Enable syncthing service
