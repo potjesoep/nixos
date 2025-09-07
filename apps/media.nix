@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; with kdePackages; [
@@ -21,7 +21,6 @@
     puddletag
     rescrobbled
     spicetify-cli
-    spotify
     sublime-music
     # downloading
     lrcget
@@ -44,4 +43,40 @@
     vlc
     ffmpeg-full
   ];
+
+  programs.spicetify =
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  in
+  {
+    enable = true;
+    theme = spicePkgs.themes.defaultDynamic;
+    enabledExtensions = with spicePkgs.extensions; [
+      #fullAppDisplayMod
+      #keyboardShortcut
+      shuffle
+      #powerBar
+      #seekSong
+      #fullAlbumDate
+      #wikify
+      #showQueueDuration
+      #copyToClipboard
+      #betterGenres
+      #lastfm
+      hidePodcasts
+      #volumePercentage
+    ];
+    enabledCustomApps = with spicePkgs.apps; [
+      lyricsPlus
+      historyInSidebar
+      betterLibrary
+    ];
+    enabledSnippets = with spicePkgs.snippets; [
+      hideDownloadButton
+      hideAudiobooksButton
+      hideFriendActivityButton
+      hideLyricsButton
+      hideMadeForYou
+    ];
+  };
 }
