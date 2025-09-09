@@ -7,8 +7,32 @@
     # Enables DHCP on each ethernet and wireless interface.
     useDHCP = lib.mkDefault true;
     # ports for nicotine-plus/soulseek
-    firewall.allowedTCPPorts = [ 2234 2235 2236 2237 2238 2239 42000 42001 17491 9090 ];
-    firewall.allowedUDPPorts = [ 8001 ];
+    firewall.allowedTCPPorts = [
+      # nicotine+
+      2234
+      2235
+      2236
+      2237
+      2238
+      2239
+      # warpinator
+      42000
+      42001
+      # ??
+      17491
+      # calibre server
+      9090
+    ];
+    firewall.allowedUDPPorts = [
+      # ??
+      8001
+      # calibre server
+      54982
+      48123
+      39001
+      44044
+      59678
+    ];
   };
 
   # Enable mullvad vpn service
