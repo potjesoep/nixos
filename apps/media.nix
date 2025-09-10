@@ -69,7 +69,7 @@
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
       historyInSidebar
-      betterLibrary
+      #betterLibrary
     ];
     enabledSnippets = with spicePkgs.snippets; [
       hideDownloadButton
