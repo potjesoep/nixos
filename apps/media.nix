@@ -50,7 +50,7 @@
   in
   {
     enable = true;
-    theme = spicePkgs.themes.defaultDynamic;
+    theme = spicePkgs.themes.default;
     enabledExtensions = with spicePkgs.extensions; [
       #fullAppDisplayMod
       #keyboardShortcut
