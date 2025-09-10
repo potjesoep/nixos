@@ -11,6 +11,7 @@
 
   # nix settings
   nix = {
+    settings.trusted-users = [ "root" "cuddles" ];
     package = pkgs.lixPackageSets.latest.lix;
     settings.experimental-features = [ "nix-command" "flakes" ];
     optimise.automatic = true;

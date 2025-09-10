@@ -23,6 +23,7 @@
     python3
     ghostscript
     guile
+    devenv
     # files
     ntfs3g
     samba
