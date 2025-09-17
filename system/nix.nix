@@ -5,9 +5,18 @@
     home-manager
   ];
 
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  # lix overlay
+  nixpkgs.overlays = [ (final: prev: {
+    inherit (final.lixPackageSets.stable)
+      nixpkgs-review
+      nix-direnv
+      nix-eval-jobs
+      nix-fast-build
+      colmena;
+  }) ];
 
   # nix settings
   nix = {
