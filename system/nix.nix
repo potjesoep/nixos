@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, pkgsUnstable, config, ... }:
 {
   # add home-manager cli
   environment.systemPackages = with pkgs; [
@@ -7,6 +7,13 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+
+  # this allows you to access `pkgsUnstable` anywhere in your config
+  _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
+    inherit (pkgs.stdenv.hostPlatform) system;
+    inherit (config.nixpkgs) config;
+  };
 
   # lix overlay
   nixpkgs.overlays = [ (final: prev: {

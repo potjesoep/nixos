@@ -21,6 +21,7 @@
     kgpg
     libreoffice-qt
     okteta
+    gearlever
   ];
   
   # Enable kde partition manager
