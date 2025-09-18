@@ -5,6 +5,9 @@
     (modulesPath + "/installer/scan/not-detected.nix")
   ];
 
+  # add resume device to hibernate to swap
+  boot.resumeDevice = "/dev/disk/by-label/tree_swap";
+
   # Bootloader.
   boot.loader = {
     timeout = 0;

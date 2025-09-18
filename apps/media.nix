@@ -26,6 +26,7 @@
     lrcget
     nicotine-plus
     qbittorrent
+    varia
     # pictures
     inkscape
     krita
