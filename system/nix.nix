@@ -26,7 +26,6 @@
 
   # nix settings
   nix = {
-    binaryCaches = [ "https://cache.nixos.org/" "https://fontis.cachix.org/" ];
     optimise.automatic = true;
     package = pkgs.lixPackageSets.latest.lix;
     settings.experimental-features = [ "nix-command" "flakes" ];
@@ -38,6 +37,7 @@
       options = "--delete-older-than 14d";
     };
     # nix-node simple nodejs shells
+    settings.substituters = [ "https://cache.nixos.org/" "https://fontis.cachix.org/" ];
     registry."node".to = {
       type = "github";
       owner = "fontis";
