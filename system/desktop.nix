@@ -75,6 +75,7 @@
     kaccounts-integration
     kaccounts-providers
     pciutils
+    polkit-kde-agent-1
     qtwebengine
     quota
     sddm-kcm
