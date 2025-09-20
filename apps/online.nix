@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     # email
     electron-mail
-    protonmail-desktop
     tutanota-desktop
     # sync
     syncthingtray
