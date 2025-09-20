@@ -37,7 +37,12 @@
       options = "--delete-older-than 14d";
     };
     # nix-node simple nodejs shells
-    settings.substituters = [ "https://cache.nixos.org/" "https://fontis.cachix.org/" ];
+    settings = {
+      substituters = [ "https://cache.nixos.org/" "https://fontis.cachix.org/" ];
+      trusted-public-keys = [
+        "fontis.cachix.org-1:r6CU2oXo4iozCVo09V+hjJSpFlbUxQW/rDHYlLJ03Og="
+      ];
+    };
     registry."node".to = {
       type = "github";
       owner = "fontis";
