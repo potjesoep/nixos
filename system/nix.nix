@@ -26,7 +26,7 @@
 
   # nix settings
   nix = {
-    binaryCaches = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ]
+    binaryCaches = [ "https://cache.nixos.org/" "https://fontis.cachix.org/" ];
     optimise.automatic = true;
     package = pkgs.lixPackageSets.latest.lix;
     settings.experimental-features = [ "nix-command" "flakes" ];
@@ -40,7 +40,7 @@
     # nix-node simple nodejs shells
     registry."node".to = {
       type = "github";
-      owner = "andyrichardson";
+      owner = "fontis";
       repo = "nix-node";
     };
   };
