@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    tutanota-desktop
     # sync
     syncthingtray
     nextcloud-client
