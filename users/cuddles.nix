@@ -21,6 +21,7 @@
       "qemu"
       "spice"
       "tty"
+      "uucp"
       "wheel"
     ];
   };
