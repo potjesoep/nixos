@@ -37,6 +37,12 @@
       dates = "weekly";
       options = "--delete-older-than 14d";
     };
+    # nix-node simple nodejs shells
+    registry."node".to = {
+      type = "github";
+      owner = "andyrichardson";
+      repo = "nix-node";
+    };
   };
 
   # This value determines the NixOS release from which the default
