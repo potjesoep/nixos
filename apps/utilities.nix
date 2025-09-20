@@ -7,6 +7,7 @@
     monero-gui
     # device utils
     arduino-ide
+    nitrokey-app2
     qmapshack
     solaar
     sony-headphones-client
@@ -23,7 +24,10 @@
     okteta
     gearlever
   ];
-  
+
+  # Add nitrokey udev rules
+  hardware.nitrokey.enable = true;
+
   # Enable kde partition manager
   programs.partition-manager.enable = true;
 
