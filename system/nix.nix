@@ -8,7 +8,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-
   # this allows you to access `pkgsUnstable` anywhere in your config
   _module.args.pkgsUnstable = import inputs.nixpkgs-unstable {
     inherit (pkgs.stdenv.hostPlatform) system;
@@ -27,10 +26,11 @@
 
   # nix settings
   nix = {
-    settings.trusted-users = [ "root" "cuddles" ];
+    binaryCaches = [ "https://cache.nixos.org/" "https://nix-node.cachix.org/" ]
+    optimise.automatic = true;
     package = pkgs.lixPackageSets.latest.lix;
     settings.experimental-features = [ "nix-command" "flakes" ];
-    optimise.automatic = true;
+    settings.trusted-users = [ "root" "cuddles" ];
     # Auto garbage-collect nix store older than 14days every week
     gc = {
       automatic = true;
