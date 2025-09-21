@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # email
-    electron-mail
+    #electron-mail TODO: outdated for now
     tutanota-desktop
     # sync
     syncthingtray
