@@ -9,6 +9,7 @@
     arduino-ide
     nitrokey-app2
     qmapshack
+    rockbox-utility
     solaar
     sony-headphones-client
     # 3d printing
