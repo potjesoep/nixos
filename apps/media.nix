@@ -21,7 +21,7 @@
     puddletag
     rescrobbled
     spicetify-cli
-    sublime-music
+    supersonic
     # downloading
     lrcget
     nicotine-plus
