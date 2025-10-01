@@ -25,6 +25,7 @@
     guile
     devenv
     # files
+    exfatprogs
     ntfs3g
     samba
     # documents
