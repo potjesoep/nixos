@@ -18,12 +18,13 @@
     # files
     filelight
     filezilla
+    gearlever
     gparted
     kate
+    kdiskmark
     kgpg
     libreoffice-qt
     okteta
-    gearlever
   ];
 
   # Add nitrokey udev rules
