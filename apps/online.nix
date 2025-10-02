@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # email
-    #electron-mail TODO: outdated for now
+    electron-mail
     protonmail-bridge-gui
     thunderbird
     tutanota-desktop

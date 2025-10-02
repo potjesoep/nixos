@@ -20,6 +20,7 @@
     playerctl
     puddletag
     rescrobbled
+    sacad
     spicetify-cli
     supersonic
     # downloading
