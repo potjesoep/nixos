@@ -53,5 +53,6 @@
   # udev rules for adb and vial
   services.udev.packages = with pkgs; [
     android-udev-rules
+    edl
   ];
 }
