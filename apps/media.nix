@@ -15,6 +15,7 @@
     kdenlive
     xwaylandvideobridge
     # music
+    easyeffects
     fooyin
     mpris-scrobbler
     playerctl
