@@ -11,6 +11,10 @@
     syncthingtray
     nextcloud-client
     # browsers
+    (pkgs.ungoogled-chromium.override {
+      enableWideVine = true;
+    })
+    librewolf
     mullvad-browser
     # social
     (pkgs.gajim.override {
