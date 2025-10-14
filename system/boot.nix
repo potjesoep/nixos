@@ -29,6 +29,11 @@
     sbctl
   ];
 
+  # Use swap less
+  boot.kernel.sysctl = {
+    "vm.swappiness" = 10;
+  };
+
   # Enable plymouth for fancy boot screen.
   boot.initrd.systemd.enable = true;
   boot.kernelParams = [ "quiet" "udev.log_level=3" "iwlwifi.bt_coex_active=0" "iwlwifi.power_save=0" "amd_iommu=off" ];
