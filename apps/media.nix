@@ -15,6 +15,7 @@
     kdenlive
     xwaylandvideobridge
     # music
+    audacity
     easyeffects
     fooyin
     mpris-scrobbler
