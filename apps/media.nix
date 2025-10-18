@@ -18,6 +18,7 @@
     audacity
     easyeffects
     fooyin
+    jamesdsp
     mpris-scrobbler
     playerctl
     puddletag
