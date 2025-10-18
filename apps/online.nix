@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # email
+    birdtray
     electron-mail
     protonmail-bridge-gui
     thunderbird
