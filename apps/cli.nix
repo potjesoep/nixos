@@ -25,6 +25,7 @@
     guile
     devenv
     # files
+    cifs-utils
     exfatprogs
     ntfs3g
     samba
