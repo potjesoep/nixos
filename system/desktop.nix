@@ -70,14 +70,17 @@
   # kde system info deps
   environment.systemPackages = with pkgs; with kdePackages; [
     aha
+    bup
     clinfo
     glxinfo
     kaccounts-integration
     kaccounts-providers
+    kup
     pciutils
     polkit-kde-agent-1
     qtwebengine
     quota
+    rsync
     sddm-kcm
     vulkan-tools
     wayland-utils
