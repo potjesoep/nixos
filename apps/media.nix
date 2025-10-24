@@ -13,7 +13,6 @@
       ];
     })
     kdenlive
-    xwaylandvideobridge
     # music
     audacity
     easyeffects
