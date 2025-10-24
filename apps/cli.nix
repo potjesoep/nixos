@@ -47,6 +47,7 @@
     wl-clipboard
     xclip
     # wine
+    mono
     wineWowPackages.waylandFull
     winetricks
   ];
