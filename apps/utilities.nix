@@ -12,6 +12,7 @@
     rockbox-utility
     solaar
     # 3d printing
+    freecad-qt6
     openscad
     prusa-slicer
     # files
