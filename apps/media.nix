@@ -22,6 +22,7 @@
     playerctl
     puddletag
     rescrobbled
+    rsgain
     sacad
     spicetify-cli
     supersonic
