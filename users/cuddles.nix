@@ -10,7 +10,6 @@
       mpris-scrobbler
     ];
     extraGroups = [
-      "adbusers"
       "dialout"
       "input"
       "kvm"
