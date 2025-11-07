@@ -19,6 +19,7 @@
     fooyin
     jamesdsp
     mpris-scrobbler
+    picard
     playerctl
     puddletag
     rescrobbled
