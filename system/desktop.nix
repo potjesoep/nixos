@@ -72,10 +72,10 @@
     aha
     bup
     clinfo
-    glxinfo
     kaccounts-integration
     kaccounts-providers
     kup
+    mesa-demos
     pciutils
     polkit-kde-agent-1
     qtwebengine
