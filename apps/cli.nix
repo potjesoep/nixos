@@ -2,28 +2,12 @@
 
 {
   environment.systemPackages = with pkgs; [
-    grc
     # programming
-    #(python3.withPackages(ps: with ps; [
-      #capstone
-      #colorama
-      #cryptography
-      #docopt
-      #keystone-engine
-      #lxml
-      #passlib
-      #pycryptodome
-      #pycryptodomex
-      #pyserial
-      #pyusb
-      #qrcode
-      #requests
-      #wheel
-    #]))
-    python3
-    ghostscript
-    guile
     devenv
+    ghostscript
+    grc
+    guile
+    python3
     # files
     cifs-utils
     exfatprogs
