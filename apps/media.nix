@@ -28,6 +28,8 @@
     spicetify-cli
     supersonic
     # downloading
+    amarok
+    kasts
     lrcget
     nicotine-plus
     qbittorrent
