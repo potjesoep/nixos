@@ -47,9 +47,10 @@
         uosc
       ];
     })
+    ffmpeg-full
+    mkvtoolnix-cli
     syncplay
     vlc
-    ffmpeg-full
   ];
 
   programs.spicetify =
