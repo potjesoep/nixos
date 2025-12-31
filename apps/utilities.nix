@@ -9,8 +9,10 @@
     arduino-ide
     nitrokey-app2
     qmapshack
+    qmk
     rockbox-utility
     solaar
+    vial
     # 3d printing
     freecad-qt6
     openscad
