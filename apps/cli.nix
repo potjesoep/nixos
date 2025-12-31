@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     # programming
     devenv
+    dos2unix
     ghostscript
     grc
     guile
