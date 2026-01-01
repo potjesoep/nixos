@@ -28,5 +28,5 @@
   networking.hostName = "nixos-laptop";
   services.power-profiles-daemon.enable = false;
   services.tlp.enable = true;
-  #services.xserver.xkb.variant = "workman";
+  services.xserver.xkb.variant = "workman";
 }
