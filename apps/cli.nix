@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # programming
+    android-tools
     devenv
     dos2unix
     ghostscript
@@ -51,9 +52,6 @@
     enable = true;
     defaultEditor = true;
   };
-
-  # Enable adb
-  programs.adb.enable = true;
 
   # Enable wireshark
   programs.wireshark.enable = true;
