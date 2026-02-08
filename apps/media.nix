@@ -48,6 +48,7 @@
       ];
     })
     ffmpeg-full
+    handbrake
     mkvtoolnix-cli
     syncplay
     vlc
