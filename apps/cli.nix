@@ -34,7 +34,7 @@
     xclip
     # wine
     mono
-    wineWowPackages.waylandFull
+    wineWow64Packages.waylandFull
     winetricks
   ];
 
