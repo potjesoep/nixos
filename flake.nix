@@ -56,6 +56,7 @@
         system = "x86_64-linux";
         modules = [
           ./apps/cli.nix
+          ./apps/gaming.nix
           ./apps/media.nix
           ./apps/online.nix
           ./apps/sync.nix
