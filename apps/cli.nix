@@ -10,6 +10,7 @@
     grc
     guile
     python3
+    temurin-jre-bin
     # files
     cifs-utils
     exfatprogs
