@@ -5,4 +5,6 @@
     prismlauncher
     xonotic
   ];
+
+  programs.steam.enable = true;
 }
