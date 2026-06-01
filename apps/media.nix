@@ -52,6 +52,7 @@
     mkvtoolnix-cli
     syncplay
     vlc
+    youtube-tui
   ];
 
   programs.spicetify =

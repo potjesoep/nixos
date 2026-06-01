@@ -9,6 +9,7 @@
     ghostscript
     grc
     guile
+    javaPackages.compiler.openjdk17-bootstrap
     python3
     # files
     cifs-utils
