@@ -7,6 +7,7 @@
     devenv
     dos2unix
     ghostscript
+    git-lfs
     grc
     guile
     javaPackages.compiler.openjdk17-bootstrap
