@@ -8,6 +8,11 @@
     xonotic
   ];
 
+  programs.gamescope = {
+    enable = true;
+    capSysNice = true;
+  };
+
   services.udev.extraRules = ''
     # 8BitDo Ultimate Bluetooth Controller's boot HID interface (seems to be shared by multiple 8BitDo devices)
     # Change it only if lsusb prints different Product ID when device is in bootloader mode.
