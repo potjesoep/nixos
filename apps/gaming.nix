@@ -2,9 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
+    mangohud
+    mcaselector
     prismlauncher
     xonotic
-    mcaselector
   ];
 
   services.udev.extraRules = ''
