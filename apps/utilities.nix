@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; with kdePackages; [
-    bitwarden-desktop
+    bitwarden-cli
     maliit-keyboard
     monero-gui
     # device utils
