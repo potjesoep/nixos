@@ -53,6 +53,7 @@
     syncplay
     vlc
     youtube-tui
+    yt-dlp
   ];
 
   programs.spicetify =
