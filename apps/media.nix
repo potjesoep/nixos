@@ -42,7 +42,7 @@
       scripts = with mpvScripts; [
         mpris
         quality-menu
-        sponsorblock
+        sponsorblock-minimal
         thumbfast
         uosc
       ];
