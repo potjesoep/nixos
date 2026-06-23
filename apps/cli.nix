@@ -10,8 +10,6 @@
     git-lfs
     grc
     guile
-    javaPackages.compiler.temurin-bin.jdk-17
-    javaPackages.compiler.temurin-bin.jdk-21
     javaPackages.compiler.temurin-bin.jdk-25
     python3
     # files
