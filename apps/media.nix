@@ -47,11 +47,17 @@
         uosc
       ];
     })
+    chatterino7
     ffmpeg-full
     handbrake
     mkvtoolnix-cli
+    streamlink
     syncplay
+    twitch-dl
+    twitch-hls-client
+    twitch-tui
     vlc
+    wtwitch
     youtube-tui
     yt-dlp
   ];
