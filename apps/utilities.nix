@@ -27,6 +27,8 @@
     kgpg
     libreoffice-qt
     okteta
+    # programming
+    jetbrains.idea
   ];
 
   # Add nitrokey udev rules
