@@ -63,6 +63,7 @@
           ./apps/utilities.nix
           ./hardware/cpu/amd.nix
           ./hardware/disks.nix
+          ./hardware/gpu/amd-opencl.nix
           ./hardware/input.nix
           ./hardware/sound.nix
           ./machines/nixos-laptop.nix
