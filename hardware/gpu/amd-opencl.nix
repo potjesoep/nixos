@@ -1,10 +1,12 @@
 { pkgs, ...}:
 
 {
-  hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr.icd
-    mesa.opencl
-  ];
+  hardware = {
+    amdgpu.opencl.enable = true;
+    graphics.extraPackages = with pkgs; [
+      mesa.opencl
+    ];
+  };
   
   environment.systemPackages = with pkgs; [
     clinfo
