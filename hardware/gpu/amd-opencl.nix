@@ -2,7 +2,7 @@
 
 {
   hardware.graphics.extraPackages = with pkgs; [
-    #rocmPackages.clr.icd
+    rocmPackages.clr.icd
     mesa.opencl
   ];
   
