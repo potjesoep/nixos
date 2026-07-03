@@ -4,7 +4,6 @@
   environment.systemPackages = with pkgs; [
     # switch
     fusee-interfacee-tk
-    ns-usbloader
     # minecraft
     mcaselector
     prismlauncher
@@ -13,6 +12,10 @@
     xonotic
   ];
 
+  # enable ns-usbloader and its udev rules
+  programs.ns-usbloader.enable = true;
+
+  # enable gamemode and gamescope
   programs.gamemode.enable = true;
   programs.gamescope = {
     enable = true;
