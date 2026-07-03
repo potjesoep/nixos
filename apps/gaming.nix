@@ -3,7 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # switch
-    fusee-interfacee-tk
+    fusee-nano
     # minecraft
     mcaselector
     prismlauncher
