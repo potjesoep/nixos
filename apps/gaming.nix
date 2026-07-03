@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    fusee-interfacee-tk
     mangohud
     mcaselector
     prismlauncher
