@@ -2,10 +2,14 @@
 
 {
   environment.systemPackages = with pkgs; [
+    # switch
     fusee-interfacee-tk
-    mangohud
+    ns-usbloader
+    # minecraft
     mcaselector
     prismlauncher
+    # misc
+    mangohud
     xonotic
   ];
 
