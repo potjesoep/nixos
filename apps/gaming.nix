@@ -9,6 +9,7 @@
     prismlauncher
     # misc
     mangohud
+    r2modman
     xonotic
   ];
 
