@@ -19,7 +19,6 @@
     # social
     (pkgs.gajim.override {
       enableJingle = true;
-      enableE2E = true;
       enableSecrets = true;
       enableRST = true;
       enableSpelling = true;
