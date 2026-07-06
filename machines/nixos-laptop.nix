@@ -4,7 +4,7 @@
   console.earlySetup = true;
   console.useXkbConfig = true;
   environment.variables.LIBVA_DRIVER_NAME = "radeonsi";
-  environment.variables.VDPAU_DRIVER = "radeonsi";
+  environment.variables.VDPAU_DRIVER = "va_gl";
   environment.etc.crypttab = {
     mode = "0600";
     text = ''
