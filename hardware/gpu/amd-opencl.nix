@@ -4,6 +4,7 @@
   hardware = {
     amdgpu.opencl.enable = true;
     graphics.extraPackages = with pkgs; [
+      libvdpau-va-gl
       mesa.opencl
     ];
   };
