@@ -38,6 +38,9 @@
     mono
     wineWow64Packages.stable
     winetricks
+    # hardware accel
+    libva-utils
+    vdpauinfo
   ];
 
   # Set fish as default shell for all users and enable fish in nix-shell and nix run
