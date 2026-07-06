@@ -5,11 +5,9 @@
     # recording / editing
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
-        looking-glass-obs
         obs-pipewire-audio-capture
         obs-vaapi
         obs-vkcapture
-        wlrobs
       ];
     })
     kdenlive
