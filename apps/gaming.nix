@@ -11,6 +11,9 @@
     mangohud
     r2modman
     xonotic
+    (pkgs.tetrio-desktop.override: {
+      withTetrioPlus = true;
+    })
   ];
 
   # enable ns-usbloader and its udev rules
