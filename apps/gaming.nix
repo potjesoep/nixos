@@ -11,7 +11,7 @@
     mangohud
     r2modman
     xonotic
-    (pkgs.tetrio-desktop.override: {
+    (pkgs.tetrio-desktop.override {
       withTetrioPlus = true;
     })
   ];
