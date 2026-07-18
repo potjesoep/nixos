@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, unstable, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; with kdePackages; [
@@ -46,8 +46,9 @@
       ];
     })
     chatterino7
-    ffmpeg-full
-    handbrake
+    #TODO: uncomment when build no longer fails
+    #ffmpeg-full
+    unstable.handbrake
     mkvtoolnix-cli
     streamlink
     syncplay

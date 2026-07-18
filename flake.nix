@@ -18,7 +18,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, lanzaboote, spicetify-nix, ... }@inputs:
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, spicetify-nix, ... }@inputs:
+  let
+    system = "x86_64-linux";
+    unstable = nixpkgs-unstable.legacyPackages.${system};
+  in
   {
     nixosConfigurations = {
       nixos = nixpkgs.lib.nixosSystem {
@@ -50,6 +54,7 @@
         ];
         specialArgs = {
           inherit inputs;
+          inherit unstable;
         };
       };
       nixos-laptop = nixpkgs.lib.nixosSystem {
@@ -81,6 +86,7 @@
         ];
         specialArgs = {
           inherit inputs;
+          inherit unstable;
         };
       };
     };
