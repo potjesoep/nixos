@@ -4,6 +4,8 @@
   environment.systemPackages = with pkgs; [
     # switch
     fusee-nano
+    # 3ds
+    cutentr
     # minecraft
     mcaselector
     prismlauncher
