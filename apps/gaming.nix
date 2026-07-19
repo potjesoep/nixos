@@ -5,6 +5,8 @@
     # switch
     fusee-nano
     # 3ds
+    azahar
+    ctrtool
     cutentr
     # minecraft
     mcaselector
