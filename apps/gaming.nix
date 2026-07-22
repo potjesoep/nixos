@@ -8,6 +8,9 @@
     azahar
     ctrtool
     cutentr
+    # wii u
+    cemu
+    cdecrypt
     # minecraft
     mcaselector
     prismlauncher
