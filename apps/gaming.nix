@@ -15,10 +15,11 @@
     mcaselector
     prismlauncher
     # misc
+    apotris
     mangohud
     r2modman
-    xonotic
     tetrio-desktop
+    xonotic
   ];
 
   # enable ns-usbloader and its udev rules
