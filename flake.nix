@@ -31,6 +31,7 @@
           ./apps/cli.nix
           ./apps/media.nix
           ./apps/online.nix
+          ./apps/programming.nix
           ./apps/sync.nix
           ./apps/utilities.nix
           ./hardware/cpu/amd.nix
@@ -64,6 +65,7 @@
           ./apps/gaming.nix
           ./apps/media.nix
           ./apps/online.nix
+          ./apps/programming.nix
           ./apps/sync.nix
           ./apps/utilities.nix
           ./hardware/cpu/amd.nix
