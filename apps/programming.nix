@@ -16,4 +16,4 @@
 
   # reverse engineering is sorta like programming
   programs.ghidra.enable = true;
-};
+}
