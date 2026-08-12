@@ -2,16 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    # programming
-    android-tools
-    devenv
-    dos2unix
-    ghostscript
-    git-lfs
-    grc
-    guile
-    javaPackages.compiler.temurin-bin.jdk-25
-    python3
     # files
     cifs-utils
     exfatprogs
