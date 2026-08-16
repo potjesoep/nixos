@@ -38,6 +38,7 @@
   # Enable mullvad vpn service
   services.mullvad-vpn = {
     enable = true;
+    gui.enable = true;
   };
 
   # Enable avahi with .local domain name resolution
