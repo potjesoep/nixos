@@ -38,6 +38,7 @@
     # video
     (mpv.override {
       scripts = with mpvScripts; [
+        autosub
         mpris
         quality-menu
         sponsorblock-minimal
