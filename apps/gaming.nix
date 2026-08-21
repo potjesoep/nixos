@@ -21,11 +21,10 @@
     apotris
     mangohud
     r2modman
-    tetrio-desktop
-    #(tetrio-desktop.override {
-    #  tetrio-plus = nur.repos.juxgd.tetrio-plus;
-    #  withTetrioPlus = true;
-    #})
+    (tetrio-desktop.override {
+      tetrio-plus = nur.repos.juxgd.tetrio-plus;
+      withTetrioPlus = true;
+    })
     xonotic
   ];
 
