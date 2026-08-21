@@ -1,6 +1,9 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+  # add NUR overlay for tetrio-plus
+  nixpkgs.overlays = [ inputs.nur.overlays.default ];
+
   environment.systemPackages = with pkgs; [
     # switch
     fusee-nano
@@ -19,6 +22,10 @@
     mangohud
     r2modman
     tetrio-desktop
+    #(tetrio-desktop.override {
+    #  tetrio-plus = nur.repos.juxgd.tetrio-plus;
+    #  withTetrioPlus = true;
+    #})
     xonotic
   ];
 
