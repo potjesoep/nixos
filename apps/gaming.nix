@@ -18,7 +18,7 @@
     mcaselector
     prismlauncher
     # misc
-    apotris
+    (pkgs.callPackage ../pkgs/apotris/default.nix {})
     mangohud
     r2modman
     (tetrio-desktop.override {
