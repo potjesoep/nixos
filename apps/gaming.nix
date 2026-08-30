@@ -11,7 +11,6 @@
     azahar
     ctrtool
     cutentr
-    (pkgs.callPackage ../pkgs/ninfs {})
     # wii u
     cemu
     cdecrypt

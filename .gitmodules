@@ -1,3 +1,0 @@
-[submodule "pkgs/ninfs"]
-	path = pkgs/ninfs
-	url = https://github.com/ihaveamac/ninfs.git
