@@ -22,7 +22,7 @@
     mangohud
     r2modman
     (tetrio-desktop.override {
-      tetrio-plus = nur.repos.juxgd.tetrio-plus;
+      #tetrio-plus = nur.repos.juxgd.tetrio-plus;
       withTetrioPlus = true;
     })
     xonotic
