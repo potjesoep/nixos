@@ -33,6 +33,7 @@
     qbittorrent
     varia
     # pictures
+    gimp
     inkscape
     krita
     # video
