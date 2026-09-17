@@ -14,9 +14,9 @@
     solaar
     vial
     # 3d printing
-    #TODO: uncomment when fixed
     blender
-    freecad-qt6
+    #TODO: uncomment when fixed
+    #freecad-qt6
     openscad
     prusa-slicer
     # files

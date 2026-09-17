@@ -7,7 +7,7 @@
     electron-mail
     protonmail-bridge-gui
     thunderbird
-    tutanota-desktop
+    #tutanota-desktop
     # sync
     syncthingtray
     nextcloud-client
@@ -27,7 +27,7 @@
     })
     element-desktop
     fluffychat
-    signal-desktop
+    #signal-desktop
     telegram-desktop
     zapzap
     zoom-us
