@@ -10,7 +10,7 @@
     git-lfs
     grc
     guile
-    (pkgs.javaPackages.compiler.openjdk25.override {
+    (pkgs.zulu25.override {
       enableJavaFX = true;
     })
     python3
