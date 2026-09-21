@@ -11,6 +11,7 @@
     grc
     guile
     javaPackages.compiler.temurin-bin.jdk-25
+    javaPackages.openjfx25
     python3
   ];
 
