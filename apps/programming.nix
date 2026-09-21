@@ -10,8 +10,9 @@
     git-lfs
     grc
     guile
-    javaPackages.compiler.temurin-bin.jdk-25
-    javaPackages.openjfx25
+    (pkgs.javaPackages.compiler.openjdk25.override {
+      enableJavaFX = true;
+    })
     python3
   ];
 
