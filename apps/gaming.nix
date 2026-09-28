@@ -11,9 +11,10 @@
     azahar
     ctrtool
     cutentr
-    # wii u
-    cemu
+    # wii (u)
     cdecrypt
+    cemu
+    dolphin-emu
     # minecraft
     mcaselector
     prismlauncher
