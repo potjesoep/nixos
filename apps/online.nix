@@ -5,7 +5,7 @@
     # email
     birdtray
     electron-mail
-    protonmail-bridge-gui
+    #protonmail-bridge-gui
     thunderbird
     tutanota-desktop
     # sync
