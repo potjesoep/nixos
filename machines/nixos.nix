@@ -13,7 +13,7 @@
       device = "/dev/disk/by-label/tree_huge";
       fsType = "btrfs";
     };
-    "/mnt/more" = {
+    "/mnt/more" = { 
       device = "/dev/disk/by-label/tree_more";
       fsType = "f2fs";
     };
