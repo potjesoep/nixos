@@ -8,6 +8,11 @@
   # add resume device to hibernate to swap
   boot.resumeDevice = "/dev/disk/by-label/tree_swap";
 
+  # early load keyboard layout
+  console.earlySetup = true;
+  console.useXkbConfig = true;
+  services.xserver.xkb.variant = "workman";
+
   # Bootloader.
   boot.loader = {
     timeout = 0;
