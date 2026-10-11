@@ -34,6 +34,9 @@
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
 
+    # fix build failing on nix unstable
+    branch = "bleeding_edge";
+
     # Enable the Nvidia settings menu,
 	# accessible via `nvidia-settings`.
     nvidiaSettings = true;
