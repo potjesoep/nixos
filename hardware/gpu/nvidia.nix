@@ -8,7 +8,7 @@
     extraPackages = with pkgs; [
       libva-vdpau-driver
       libvdpau-va-gl
-      nvidia-vaapi-driver
+      #nvidia-vaapi-driver
     ];
   };
 
