@@ -25,6 +25,12 @@
       enableUPnP = true;
       enableAppIndicator = true;
     })
+    (pkgs.discord.override {
+      disableUpdates = true;
+      withOpenASAR = true;
+      withTTS = true;
+      withVencord = true;
+    })
     element-desktop
     fluffychat
     signal-desktop
