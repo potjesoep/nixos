@@ -28,8 +28,14 @@
   nix = {
     optimise.automatic = true;
     package = pkgs.lixPackageSets.latest.lix;
-    settings.experimental-features = [ "nix-command" "flakes" ];
-    settings.trusted-users = [ "root" "cuddles" ];
+    settings = {
+      # enable flakes
+      experimental-features = [ "nix-command" "flakes" ];
+      # cuda cachix package cache
+      substituters = [ "https://cache.nixos-cuda.org" ];
+      trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+      trusted-users = [ "root" "cuddles" ];
+    };
     # Auto garbage-collect nix store older than 14days every week
     gc = {
       automatic = true;
