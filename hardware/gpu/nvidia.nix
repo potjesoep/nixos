@@ -8,12 +8,15 @@
     extraPackages = with pkgs; [
       libva-vdpau-driver
       libvdpau-va-gl
-      #nvidia-vaapi-driver
+      nvidia-vaapi-driver
     ];
   };
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = ["nvidia"];
+
+  # enable CUDA support globally
+  nixpkgs.config.cudaSupport = true;
 
   hardware.nvidia = {
     # Modesetting is required.
