@@ -17,16 +17,25 @@
 
   # enable CUDA support globally
   nixpkgs.config.cudaSupport = true;
+  nix.settings = {
+    substituters = [ "https://cache.nixos-cuda.org" ];
+    trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
+  };
 
   hardware.nvidia = {
     # Modesetting is required.
     modesetting.enable = true;
 
     # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    powerManagement.enable = true;
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
+    powerManagement = {
+      enable = true;
+      # Fine-grained power management. Turns off GPU when not in use.
+      # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+      finegrained = true;
+    };
+
+    # enable video encode/decode related settings
+    videoAcceleration = true;
 
     # Use the NVidia open source kernel module (not to be confused with the
     # independent third-party "nouveau" open source driver).
@@ -37,7 +46,7 @@
     # Do not disable this unless your GPU is unsupported or if you have a good reason to.
     open = true;
 
-    # fix build failing on nix unstable
+    # use whichever is newer of `latest` and `beta`.
     branch = "bleeding_edge";
 
     # Enable the Nvidia settings menu,
@@ -46,7 +55,7 @@
   };
 
   # Load nvidia_uvm again for some reason it stopped working
-  boot.kernelModules = [ "nvidia_uvm" ];
+  #boot.kernelModules = [ "nvidia_uvm" ];
 
   # Set libva driver name for hardware accelerataed video encoding/decoding
   environment.variables = {
