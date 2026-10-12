@@ -26,6 +26,7 @@
       #tetrio-plus = nur.repos.juxgd.tetrio-plus;
       withTetrioPlus = true;
     })
+    heroic
     xonotic
   ];
 
