@@ -58,6 +58,8 @@
 
   programs.obs-studio = {
     enable = true;
+    # add virtual camera support
+    enableVirtualCamera = true;
 
     # optional Nvidia hardware acceleration
     package = (
