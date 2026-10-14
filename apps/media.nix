@@ -8,6 +8,7 @@
     audacity
     easyeffects
     fooyin
+    freac
     jamesdsp
     mpris-scrobbler
     picard
