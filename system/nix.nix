@@ -16,7 +16,7 @@
 
   # lix overlay
   nixpkgs.overlays = [ (final: prev: {
-    inherit (final.lixPackageSets.latest)
+    inherit (final.lixPackageSets.lix_2_96)
       nixpkgs-review
       nix-direnv
       nix-eval-jobs
@@ -27,7 +27,7 @@
   # nix settings
   nix = {
     optimise.automatic = true;
-    package = pkgs.lixPackageSets.latest.lix;
+    package = pkgs.lixPackageSets.lix_2_96.lix;
     settings = {
       # enable flakes
       experimental-features = [ "nix-command" "flakes" ];
