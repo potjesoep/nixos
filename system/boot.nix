@@ -27,6 +27,11 @@
 
   # Secure boot
   boot.lanzaboote = {
+    autoEnrollKeys = {
+      enable = true;
+      autoReboot = true;
+    };
+    autoGenerateKeys.enable = true;
     enable = true;
     pkiBundle = "/var/lib/sbctl";
   };
