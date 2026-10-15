@@ -21,4 +21,7 @@
   services.packagekit.enable = true;
   services.fwupd.enable = true;
   fonts.fontDir.enable = true;
+
+  # allow running unpatched dynamically linked binaries
+  programs.nix-ld.enable = true;
 }
