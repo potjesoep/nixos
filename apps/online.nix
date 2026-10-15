@@ -32,6 +32,7 @@
       withVencord = true;
     })
     element-desktop
+    equibop
     fluffychat
     signal-desktop
     telegram-desktop
