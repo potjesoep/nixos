@@ -31,8 +31,11 @@
       withTTS = true;
       withVencord = true;
     })
+    (pkgs.equibop.override {
+      withTTS = true;
+      withMiddleClickScroll = true;
+    })
     element-desktop
-    equibop
     fluffychat
     signal-desktop
     telegram-desktop
