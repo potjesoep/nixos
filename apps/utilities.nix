@@ -34,16 +34,16 @@
     jetbrains.idea
   ];
 
-  # Add nitrokey udev rules
+  # Add nitrokey udev rules and GPG support
   hardware.nitrokey.enable = true;
+  programs = {
+    ssh.startAgent = false;
+    gnupg.agent = {
+      enable = true;
+      enableSSHSupport = true;
+    };
+  };
 
   # Enable kde partition manager
   programs.partition-manager.enable = true;
-
-  # Enable GnuPG agent
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
-
 }
