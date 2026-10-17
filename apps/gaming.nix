@@ -19,14 +19,15 @@
     mcaselector
     prismlauncher
     # misc
-    apotris
-    mangohud
-    r2modman
     (tetrio-desktop.override {
       #tetrio-plus = nur.repos.juxgd.tetrio-plus;
       withTetrioPlus = true;
     })
+    apotris
     heroic
+    itch
+    mangohud
+    r2modman
     xonotic
   ];
 
