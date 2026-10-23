@@ -34,6 +34,14 @@
     jetbrains.idea
   ];
 
+  # install nix helper
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/etc/nixos"; # sets NH_OS_FLAKE variable for you
+  };
+
   # Add nitrokey udev rules and GPG support
   hardware.nitrokey.enable = true;
   programs = {
