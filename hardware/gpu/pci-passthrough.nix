@@ -7,5 +7,5 @@
   boot.kernelModules = [ "vfio" "vfio_iommu_type1" "vfio_pci" ];
   
   # CHANGE: Don't forget to put your own PCI IDs here
-  boot.extraModprobeConfig ="options vfio-pci ids=8086:2723";
+  #boot.extraModprobeConfig ="options vfio-pci ids=[VENDOR:DEVICE]";
 }
