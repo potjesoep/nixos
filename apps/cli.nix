@@ -31,6 +31,9 @@
     # hardware accel
     libva-utils
     vdpauinfo
+    # hehe funny term"utils"
+    fastfetch
+    hyfetch
   ];
 
   # Set fish as default shell for all users and enable fish in nix-shell and nix run
