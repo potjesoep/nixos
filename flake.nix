@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-patch-audacity-qt612-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/577022.diff";
+      flake = false;
+    };
     nixpkgs-patch-linux-modules-ryzen-smu-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/576504.diff";
       flake = false;
@@ -16,7 +20,7 @@
       url = "https://github.com/NixOS/nixpkgs/pull/576397.diff";
       flake = false;
     };
-    nixpkgs-patch-python-fix-makewrapperargs = {
+    nixpkgs-patch-python-fix-makewrapperargs-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/575801.diff";
       flake = false;
     };
