@@ -3,7 +3,6 @@
 
   inputs = {
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-patch-linux-modules-ryzen-smu-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/576504.diff";
@@ -35,14 +34,10 @@
     };
   };
 
-  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, nixpkgs-unstable, spicetify-nix, ... }@inputs:
-  let
-    system = "x86_64-linux";
-    unstable = nixpkgs-unstable.legacyPackages.${system};
-  in
+  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, spicetify-nix, ... }@inputs:
   {
     nixosConfigurations = {
-      nixos = nixpkgs.lib.nixosSystem {
+      nixos = nixpkgs-patcher.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./apps/cli.nix
@@ -71,12 +66,9 @@
           lanzaboote.nixosModules.lanzaboote
           spicetify-nix.nixosModules.spicetify
         ];
-        specialArgs = {
-          inherit inputs;
-          inherit unstable;
-        };
+        specialArgs = inputs // { inherit inputs; };
       };
-      nixos-laptop = nixpkgs.lib.nixosSystem {
+      nixos-laptop = nixpkgs-patcher.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./apps/cli.nix
@@ -104,10 +96,7 @@
           lanzaboote.nixosModules.lanzaboote
           spicetify-nix.nixosModules.spicetify
         ];
-        specialArgs = {
-          inherit inputs;
-          inherit unstable;
-        };
+        specialArgs = inputs // { inherit inputs; };
       };
     };
   };

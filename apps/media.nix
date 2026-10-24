@@ -1,4 +1,4 @@
-{ pkgs, unstable, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; with kdePackages; [
@@ -41,10 +41,9 @@
         uosc
       ];
     })
+    (pkgs.ffmpeg-full.override { withUnfree = true; })
     chatterino7
-    #TODO: uncomment when build no longer fails
-    #ffmpeg-full
-    unstable.handbrake
+    handbrake
     mkvtoolnix-cli
     streamlink
     syncplay
@@ -61,7 +60,6 @@
     enable = true;
     # add virtual camera support
     enableVirtualCamera = true;
-
     plugins = with pkgs.obs-studio-plugins; [
       wlrobs
       obs-backgroundremoval
