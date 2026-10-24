@@ -45,7 +45,6 @@
   };
 
   # Enable plymouth for fancy boot screen.
-  boot.initrd.systemd.enable = true;
   boot.kernelParams = [ "quiet" "udev.log_level=3" "iwlwifi.bt_coex_active=0" "iwlwifi.power_save=0" "transparent_hugepage_shmem=advise" ];
   boot.plymouth = {
     enable = true;

@@ -2,37 +2,13 @@
   description = "System configuration of cuddles";
 
   inputs = {
-    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-patch-audacity-qt612-fix-build = {
-      url = "https://github.com/NixOS/nixpkgs/pull/577022.diff";
-      flake = false;
-    };
-    nixpkgs-patch-calibre-fix-build = {
-      url = "https://github.com/NixOS/nixpkgs/pull/577607.diff";
-      flake = false;
-    };
+    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     nixpkgs-patch-handbrake-ffmpeg8-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/576407.diff";
       flake = false;
     };
-    nixpkgs-patch-linux-modules-ryzen-smu-fix-build = {
-      url = "https://github.com/NixOS/nixpkgs/pull/576504.diff";
-      flake = false;
-    };
-    nixpkgs-patch-linux-modules-v4l2loopback-fix-build = {
-      url = "https://github.com/NixOS/nixpkgs/pull/575861.diff";
-      flake = false;
-    };
-    nixpkgs-patch-nvidia-split-patchelf-invoke = {
-      url = "https://github.com/NixOS/nixpkgs/pull/576397.diff";
-      flake = false;
-    };
-    nixpkgs-patch-pyopenjtalk-plus-fix-build = {
-      url = "https://github.com/NixOS/nixpkgs/pull/576063.diff";
-      flake = false;
-    };
-    nixpkgs-patch-python-fix-makewrapperargs-fix-build = {
+    nixpkgs-patch-python-makewrapperargs-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/575801.diff";
       flake = false;
     };

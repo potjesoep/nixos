@@ -134,30 +134,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-patch-audacity-qt612-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-1IdrizuMAnAUAc5tmnxOHRb1M5EHMUrCA6fFK6sPFuU=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/577022.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/577022.diff"
-      }
-    },
-    "nixpkgs-patch-calibre-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-0MB92GBhpZ1PvO6p5kSx64F05Q9aVMhjsH0hWSC3xU8=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/577607.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/577607.diff"
-      }
-    },
     "nixpkgs-patch-handbrake-ffmpeg8-fix-build": {
       "flake": false,
       "locked": {
@@ -170,55 +146,7 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/576407.diff"
       }
     },
-    "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-lMyEsyH83mYzrR5BTOAqfUqBI9cmIDkXbnx0nX4Ybak=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576504.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576504.diff"
-      }
-    },
-    "nixpkgs-patch-linux-modules-v4l2loopback-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-48rXRPlEqzod0KrUxj9WAbhF2CrLezeZ3lNarSAy5zc=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/575861.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/575861.diff"
-      }
-    },
-    "nixpkgs-patch-nvidia-split-patchelf-invoke": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-bSfv/Fw+srZyhBRZNt0L5gMcTZrFbwyBKXP1a3KprOg=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576397.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576397.diff"
-      }
-    },
-    "nixpkgs-patch-pyopenjtalk-plus-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-qFRekHTaTZ6XzR42w3fd7u40CpRC71Ukeo3NvJHlVl0=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576063.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576063.diff"
-      }
-    },
-    "nixpkgs-patch-python-fix-makewrapperargs-fix-build": {
+    "nixpkgs-patch-python-makewrapperargs-fix-build": {
       "flake": false,
       "locked": {
         "narHash": "sha256-X3yIiQG00tEl4WIVWR41nJwCT+PeIKCyNAZ7VNpzgLU=",
@@ -294,14 +222,8 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-patch-audacity-qt612-fix-build": "nixpkgs-patch-audacity-qt612-fix-build",
-        "nixpkgs-patch-calibre-fix-build": "nixpkgs-patch-calibre-fix-build",
         "nixpkgs-patch-handbrake-ffmpeg8-fix-build": "nixpkgs-patch-handbrake-ffmpeg8-fix-build",
-        "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": "nixpkgs-patch-linux-modules-ryzen-smu-fix-build",
-        "nixpkgs-patch-linux-modules-v4l2loopback-fix-build": "nixpkgs-patch-linux-modules-v4l2loopback-fix-build",
-        "nixpkgs-patch-nvidia-split-patchelf-invoke": "nixpkgs-patch-nvidia-split-patchelf-invoke",
-        "nixpkgs-patch-pyopenjtalk-plus-fix-build": "nixpkgs-patch-pyopenjtalk-plus-fix-build",
-        "nixpkgs-patch-python-fix-makewrapperargs-fix-build": "nixpkgs-patch-python-fix-makewrapperargs-fix-build",
+        "nixpkgs-patch-python-makewrapperargs-fix-build": "nixpkgs-patch-python-makewrapperargs-fix-build",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix"
