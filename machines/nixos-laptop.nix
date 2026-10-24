@@ -15,11 +15,6 @@
       fsType = "f2fs";
       options = [ "users" "rw" "nofail" ];
     };
-    "/mnt/move" = {
-      device = "/dev/disk/by-label/tree_move";
-      fsType = "ntfs-3g";
-      options = [ "users" "rw" "uid=cuddles" "nofail" ];
-    };
   };
   networking.hostName = "nixos-laptop";
   services.power-profiles-daemon.enable = false;

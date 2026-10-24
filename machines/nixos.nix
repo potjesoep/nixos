@@ -4,17 +4,11 @@
   networking.hostName = "nixos";
   boot = {
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
-    supportedFilesystems = [ "ntfs" ];
   };
   fileSystems = {
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";
       fsType = "btrfs";
-    };
-    "/mnt/move" = {
-      device = "/dev/disk/by-label/tree_move";
-      fsType = "ntfs-3g";
-      options = [ "users" "rw" "uid=cuddles" "nofail" ];
     };
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";

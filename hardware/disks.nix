@@ -15,6 +15,13 @@
     fsType = "ext4";
   };
 
+  boot.supportedFilesystems = [ "ntfs" ];
+  fileSystems."/mnt/move" = {
+    device = "/dev/disk/by-label/tree_move";
+    fsType = "ntfs-3g";
+    options = [ "users" "rw" "uid=cuddles" "nofail" ];
+  };
+
   swapDevices = [
     { device = "/dev/disk/by-label/tree_swap"; }
   ];
