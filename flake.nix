@@ -2,8 +2,21 @@
   description = "System configuration of cuddles";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-patch-linux-modules-ryzen-smu-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/576504.diff";
+      flake = false;
+    };
+    nixpkgs-patch-linux-modules-v4l2loopback-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/575861.diff";
+      flake = false;
+    };
+    nixpkgs-patch-nvidia-split-patchelf-invoke = {
+      url = "https://github.com/NixOS/nixpkgs/pull/576397.diff";
+      flake = false;
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -22,7 +35,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, lanzaboote, spicetify-nix, ... }@inputs:
+  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, nixpkgs-unstable, spicetify-nix, ... }@inputs:
   let
     system = "x86_64-linux";
     unstable = nixpkgs-unstable.legacyPackages.${system};
