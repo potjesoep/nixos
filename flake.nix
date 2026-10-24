@@ -16,6 +16,10 @@
       url = "https://github.com/NixOS/nixpkgs/pull/576397.diff";
       flake = false;
     };
+    nixpkgs-patch-python-fix-makewrapperargs = {
+      url = "https://github.com/NixOS/nixpkgs/pull/575801.diff";
+      flake = false;
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

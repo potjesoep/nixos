@@ -158,18 +158,6 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/575861.diff"
       }
     },
-    "nixpkgs-patch-nvidia-split-patchelf-invoke": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-bSfv/Fw+srZyhBRZNt0L5gMcTZrFbwyBKXP1a3KprOg=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576397.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576397.diff"
-      }
-    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1789143781,
@@ -236,7 +224,6 @@
         "nixpkgs": "nixpkgs",
         "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": "nixpkgs-patch-linux-modules-ryzen-smu-fix-build",
         "nixpkgs-patch-linux-modules-v4l2loopback-fix-build": "nixpkgs-patch-linux-modules-v4l2loopback-fix-build",
-        "nixpkgs-patch-nvidia-split-patchelf-invoke": "nixpkgs-patch-nvidia-split-patchelf-invoke",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix"
