@@ -146,6 +146,18 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/577022.diff"
       }
     },
+    "nixpkgs-patch-handbrake-ffmpeg8-fix-build": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-cj2Ly98+DDgM2oCJevA9+iz8sWGlsq16AfqlJxTJbZQ=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/576407.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/576407.diff"
+      }
+    },
     "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": {
       "flake": false,
       "locked": {
@@ -180,6 +192,18 @@
       "original": {
         "type": "file",
         "url": "https://github.com/NixOS/nixpkgs/pull/576397.diff"
+      }
+    },
+    "nixpkgs-patch-pyopenjtalk-plus-fix-build": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-qFRekHTaTZ6XzR42w3fd7u40CpRC71Ukeo3NvJHlVl0=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/576063.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/576063.diff"
       }
     },
     "nixpkgs-patch-python-fix-makewrapperargs-fix-build": {
@@ -259,9 +283,11 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "nixpkgs-patch-audacity-qt612-fix-build": "nixpkgs-patch-audacity-qt612-fix-build",
+        "nixpkgs-patch-handbrake-ffmpeg8-fix-build": "nixpkgs-patch-handbrake-ffmpeg8-fix-build",
         "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": "nixpkgs-patch-linux-modules-ryzen-smu-fix-build",
         "nixpkgs-patch-linux-modules-v4l2loopback-fix-build": "nixpkgs-patch-linux-modules-v4l2loopback-fix-build",
         "nixpkgs-patch-nvidia-split-patchelf-invoke": "nixpkgs-patch-nvidia-split-patchelf-invoke",
+        "nixpkgs-patch-pyopenjtalk-plus-fix-build": "nixpkgs-patch-pyopenjtalk-plus-fix-build",
         "nixpkgs-patch-python-fix-makewrapperargs-fix-build": "nixpkgs-patch-python-fix-makewrapperargs-fix-build",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",

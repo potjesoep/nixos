@@ -41,7 +41,8 @@
         uosc
       ];
     })
-    (pkgs.ffmpeg-full.override { withUnfree = true; })
+    # TODO: re-enable when build is fixed
+    #(pkgs.ffmpeg-full.override { withUnfree = true; })
     chatterino7
     handbrake
     mkvtoolnix-cli

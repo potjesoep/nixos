@@ -24,6 +24,10 @@
       url = "https://github.com/NixOS/nixpkgs/pull/576397.diff";
       flake = false;
     };
+    nixpkgs-patch-pyopenjtalk-plus-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/576063.diff";
+      flake = false;
+    };
     nixpkgs-patch-python-fix-makewrapperargs-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/575801.diff";
       flake = false;

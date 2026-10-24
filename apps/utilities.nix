@@ -16,8 +16,7 @@
     vial
     # 3d printing
     blender
-    #TODO: uncomment when fixed
-    #freecad-qt6
+    freecad-qt6
     openscad
     prusa-slicer
     # files
