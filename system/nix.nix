@@ -23,6 +23,8 @@
     optimise.automatic = true;
     package = pkgs.lixPackageSets.lix_2_96.lix;
     settings = {
+      # auto optimise during build
+      auto-optimise-store = true;
       # enable flakes
       experimental-features = [ "nix-command" "flakes" ];
       # cuda cachix package cache
