@@ -146,6 +146,18 @@
         "url": "https://github.com/NixOS/nixpkgs/pull/577022.diff"
       }
     },
+    "nixpkgs-patch-calibre-fix-build": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-0MB92GBhpZ1PvO6p5kSx64F05Q9aVMhjsH0hWSC3xU8=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/577607.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/577607.diff"
+      }
+    },
     "nixpkgs-patch-handbrake-ffmpeg8-fix-build": {
       "flake": false,
       "locked": {
@@ -283,6 +295,7 @@
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
         "nixpkgs-patch-audacity-qt612-fix-build": "nixpkgs-patch-audacity-qt612-fix-build",
+        "nixpkgs-patch-calibre-fix-build": "nixpkgs-patch-calibre-fix-build",
         "nixpkgs-patch-handbrake-ffmpeg8-fix-build": "nixpkgs-patch-handbrake-ffmpeg8-fix-build",
         "nixpkgs-patch-linux-modules-ryzen-smu-fix-build": "nixpkgs-patch-linux-modules-ryzen-smu-fix-build",
         "nixpkgs-patch-linux-modules-v4l2loopback-fix-build": "nixpkgs-patch-linux-modules-v4l2loopback-fix-build",

@@ -30,11 +30,11 @@
       trusted-public-keys = [ "cache.nixos-cuda.org:74DUi4Ye579gUqzH4ziL9IyiJBlDpMRn9MBN8oNan9M=" ];
       trusted-users = [ "root" "cuddles" ];
     };
-    # Auto garbage-collect nix store older than 14days every week
+    # Auto garbage-collect nix store every day, keep the 5 most recent generations
     gc = {
       automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 14d";
+      dates = "daily";
+      options = "--delete-older-than +5";
     };
   };
 
