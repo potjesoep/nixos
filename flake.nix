@@ -8,6 +8,10 @@
       url = "https://github.com/NixOS/nixpkgs/pull/577022.diff";
       flake = false;
     };
+    nixpkgs-patch-handbrake-ffmpeg8-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/576407.diff";
+      flake = false;
+    };
     nixpkgs-patch-linux-modules-ryzen-smu-fix-build = {
       url = "https://github.com/NixOS/nixpkgs/pull/576504.diff";
       flake = false;
