@@ -10,11 +10,11 @@
       device = "/dev/disk/by-label/tree_huge";
       fsType = "btrfs";
     };
-    "/mnt/quad" = {
-      device = "/dev/disk/by-label/tree_quad";
-      fsType = "f2fs";
-      options = [ "nofail" ];
-    };
+    #"/mnt/quad" = {
+    #  device = "/dev/disk/by-label/tree_quad";
+    #  fsType = "f2fs";
+    #  options = [ "nofail" ];
+    #};
   };
   systemd.targets = {
     sleep.enable = false;
