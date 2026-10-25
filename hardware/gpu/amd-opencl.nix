@@ -14,9 +14,23 @@
     };
   };
 
+  # enable rocM support globally
+  nixpkgs.config.rocmSupport = true;
+
   # set location for HIP file to workaround issues
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
+  systemd.tmpfiles.rules =
+  let
+    rocmEnv = pkgs.symlinkJoin {
+      name = "rocm-combined";
+      paths = with pkgs.rocmPackages; [
+        rocblas
+        hipblas
+        clr
+      ];
+    };
+  in
+  [
+    "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
   ];
 
   # opencl info

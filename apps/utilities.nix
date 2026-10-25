@@ -15,7 +15,7 @@
     solaar
     vial
     # 3d printing
-    blender-hip
+    blender
     freecad-qt6
     openscad
     prusa-slicer
