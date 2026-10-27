@@ -81,11 +81,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793033486,
-        "narHash": "sha256-fXVURa0+CSCgaxLt8tmPNJq2U+fGYOwbk5j2YUe7kSc=",
+        "lastModified": 1793124281,
+        "narHash": "sha256-KdGTOgYXgMDA/ymTV10yLMt9tOjz9EmTgnTvaD+bhe4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7db163b2aee7e410e396b48aed02f646d742b9b8",
+        "rev": "1e3ebeb683d055d1675d3f64e6d2b186cb2ee504",
         "type": "github"
       },
       "original": {
@@ -149,7 +149,7 @@
     "nixpkgs-patch-python-makewrapperargs-fix-build": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-X3yIiQG00tEl4WIVWR41nJwCT+PeIKCyNAZ7VNpzgLU=",
+        "narHash": "sha256-D4hUm6/B4PMN9dwd6rSMAJOj7vFPrF+/w3b1YJqmCXU=",
         "type": "file",
         "url": "https://github.com/NixOS/nixpkgs/pull/575801.diff"
       },
@@ -181,11 +181,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1793047204,
-        "narHash": "sha256-fRxP3mztgdbEDVfrfZG8XyEy/akVPQC2yL5R9TOPSIA=",
+        "lastModified": 1793133570,
+        "narHash": "sha256-EfDBvK7Oy7MjNV8Uk/wBl6fEtwLtH/4iUe7hQ9G1QmU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "f1fbc4713b77e4754aac5e00933607974d8e8c9e",
+        "rev": "cbf11d449a9a00393424f633bb15d0a2c66ac783",
         "type": "github"
       },
       "original": {
