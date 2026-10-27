@@ -15,6 +15,8 @@
     cdecrypt
     cemu
     dolphin-emu
+    # ps4
+    shadps4-qtlauncher
     # minecraft
     mcaselector
     prismlauncher
