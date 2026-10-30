@@ -134,30 +134,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-patch-handbrake-ffmpeg8-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-cj2Ly98+DDgM2oCJevA9+iz8sWGlsq16AfqlJxTJbZQ=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576407.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/576407.diff"
-      }
-    },
-    "nixpkgs-patch-python-makewrapperargs-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-D4hUm6/B4PMN9dwd6rSMAJOj7vFPrF+/w3b1YJqmCXU=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/575801.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/575801.diff"
-      }
-    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1789143781,
@@ -222,8 +198,6 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-patch-handbrake-ffmpeg8-fix-build": "nixpkgs-patch-handbrake-ffmpeg8-fix-build",
-        "nixpkgs-patch-python-makewrapperargs-fix-build": "nixpkgs-patch-python-makewrapperargs-fix-build",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "spicetify-nix": "spicetify-nix"
