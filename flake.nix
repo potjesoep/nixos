@@ -37,7 +37,7 @@
           ./apps/utilities.nix
           ./hardware/cpu/amd.nix
           ./hardware/disks.nix
-          ./hardware/gpu/nvidia.nix
+          ./hardware/gpu/amd-opencl.nix
           ./hardware/gpu/pci-passthrough.nix
           ./hardware/input.nix
           ./hardware/sound.nix
