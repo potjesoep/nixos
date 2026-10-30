@@ -1,4 +1,4 @@
-{ pkgs, inputs, pkgsUnstable, config, ... }:
+{ pkgs, inputs, occt-nix, config, ... }:
 {
   # add home-manager cli
   environment.systemPackages = with pkgs; [
@@ -16,7 +16,9 @@
       nix-eval-jobs
       nix-fast-build
       colmena;
-  }) ];
+    })
+    occt-nix.overlays.default
+  ];
 
   # nix settings
   nix = {

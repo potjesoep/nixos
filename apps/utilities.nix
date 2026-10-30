@@ -14,6 +14,7 @@
     rockbox-utility
     solaar
     vial
+    occt
     # 3d printing
     blender
     freecad-qt6
