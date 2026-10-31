@@ -15,6 +15,7 @@
     solaar
     vial
     occt
+    (callPackage ../pkgs/memtimings {})
     # 3d printing
     blender
     freecad-qt6
