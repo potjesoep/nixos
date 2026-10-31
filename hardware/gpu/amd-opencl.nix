@@ -42,4 +42,10 @@
 
   # gpu overclock/undervolt/fan curve tool
   services.lact.enable = true;
+
+  # Set libva driver name for hardware accelerataed video encoding/decoding
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "radeonsi";
+    VDPAU_DRIVER = "va_gl";
+  };
 }
