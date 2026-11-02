@@ -5,6 +5,7 @@
   boot = {
     initrd.luks.devices."crypt_data".device = "/dev/disk/by-partlabel/part_data";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
+    initrd.luks.devices."crypt_sata".device = "/dev/disk/by-partlabel/part_sata";
   };
   fileSystems = {
     "/mnt/data" = {
@@ -19,11 +20,15 @@
       device = "/dev/disk/by-label/tree_quad";
       fsType = "f2fs";
     };
+    "/mnt/sata" = {
+      device = "/dev/disk/by-label/tree_sata";
+      fsType = "btrfs";
+    };
   };
-  systemd.targets = {
-    sleep.enable = false;
-    suspend.enable = false;
-    hibernate.enable = false;
-    hybrid-sleep.enable = false;
-  };
+  #systemd.targets = {
+  #  sleep.enable = false;
+  #  suspend.enable = false;
+  #  hibernate.enable = false;
+  #  hybrid-sleep.enable = false;
+  #};
 }
