@@ -26,6 +26,7 @@
       withTetrioPlus = true;
     })
     apotris
+    goverlay
     heroic
     itch
     mangohud
