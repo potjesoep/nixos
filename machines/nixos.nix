@@ -3,9 +3,14 @@
 {
   networking.hostName = "nixos";
   boot = {
+    initrd.luks.devices."crypt_data".device = "/dev/disk/by-partlabel/part_data";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
   };
   fileSystems = {
+    "/mnt/data" = {
+      device = "/dev/disk/by-label/tree_data";
+      fsType = "xfs";
+    };
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";
       fsType = "btrfs";
