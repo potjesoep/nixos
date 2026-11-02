@@ -14,6 +14,8 @@
     rockbox-utility
     solaar
     vial
+    # overclocking
+    furmark
     occt
     (callPackage ../pkgs/memtimings {})
     # 3d printing
