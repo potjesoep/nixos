@@ -12,6 +12,7 @@
     qmapshack
     qmk
     rockbox-utility
+    smartmontools
     solaar
     vial
     # overclocking
