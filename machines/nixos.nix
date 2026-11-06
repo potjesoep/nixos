@@ -20,6 +20,7 @@
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";
       fsType = "btrfs";
+      options = [ "nofail" ];
     };
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";
