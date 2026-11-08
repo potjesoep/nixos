@@ -5,8 +5,6 @@
   boot = {
     initrd.luks.devices."crypt_data".device = "/dev/disk/by-partlabel/part_data";
     initrd.luks.devices."crypt_fast".device = "/dev/disk/by-partlabel/part_fast";
-    initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
-    initrd.luks.devices."crypt_sata".device = "/dev/disk/by-partlabel/part_sata";
     initrd.luks.devices."crypt_xtra".device = "/dev/disk/by-partlabel/part_xtra";
   };
   fileSystems = {
@@ -20,16 +18,6 @@
     };
     "/mnt/huge" = {
       device = "/dev/disk/by-label/tree_huge";
-      fsType = "btrfs";
-      options = [ "nofail" ];
-    };
-    "/mnt/quad" = {
-      device = "/dev/disk/by-label/tree_quad";
-      fsType = "btrfs";
-      options = [ "nofail" ];
-    };
-    "/mnt/sata" = {
-      device = "/dev/disk/by-label/tree_sata";
       fsType = "btrfs";
       options = [ "nofail" ];
     };
