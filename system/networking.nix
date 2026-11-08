@@ -33,6 +33,14 @@
       44044
       59678
     ];
+    # gta v online battleye workaround
+    hosts = {
+      "0.0.0.0" = [
+        "paradise-s1.battleye.com"
+        "paradiseenhanced-s1.battleye.com"
+        "test-s1.battleye.com"
+      ];
+    };
   };
 
   # Enable mullvad vpn service
