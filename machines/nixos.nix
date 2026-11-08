@@ -7,6 +7,7 @@
     initrd.luks.devices."crypt_fast".device = "/dev/disk/by-partlabel/part_fast";
     initrd.luks.devices."crypt_quad".device = "/dev/disk/by-partlabel/part_quad";
     initrd.luks.devices."crypt_sata".device = "/dev/disk/by-partlabel/part_sata";
+    initrd.luks.devices."crypt_xtra".device = "/dev/disk/by-partlabel/part_xtra";
   };
   fileSystems = {
     "/mnt/data" = {
@@ -29,6 +30,11 @@
     "/mnt/sata" = {
       device = "/dev/disk/by-label/tree_sata";
       fsType = "btrfs";
+    };
+    "/mnt/xtra" = {
+      device = "/dev/disk/by-label/tree_xtra";
+      fsType = "btrfs";
+      options = [ "nofail" ];
     };
   };
   #systemd.targets = {
