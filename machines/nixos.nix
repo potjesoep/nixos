@@ -26,10 +26,12 @@
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";
       fsType = "f2fs";
+      options = [ "nofail" ];
     };
     "/mnt/sata" = {
       device = "/dev/disk/by-label/tree_sata";
       fsType = "btrfs";
+      options = [ "nofail" ];
     };
     "/mnt/xtra" = {
       device = "/dev/disk/by-label/tree_xtra";
