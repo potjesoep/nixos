@@ -25,7 +25,7 @@
     };
     "/mnt/quad" = {
       device = "/dev/disk/by-label/tree_quad";
-      fsType = "f2fs";
+      fsType = "btrfs";
       options = [ "nofail" ];
     };
     "/mnt/sata" = {
