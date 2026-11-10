@@ -1,4 +1,4 @@
-{ pkgs, inputs, occt-nix, config, ... }:
+{ pkgs, inputs, occt-nix, config, lib, ... }:
 {
   # add home-manager cli
   environment.systemPackages = with pkgs; [
