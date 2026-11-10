@@ -16,13 +16,14 @@
     puddletag
     rescrobbled
     rsgain
-    sacad
+    # TODO: re-enable when fixed
+    #sacad
+    #lrcget
     spicetify-cli
     supersonic
     # downloading
     amarok
     kasts
-    lrcget
     nicotine-plus
     qbittorrent
     varia

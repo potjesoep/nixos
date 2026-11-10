@@ -18,6 +18,7 @@
       colmena;
     })
     occt-nix.overlays.default
+    # TODO: remove when fixed
     # temporary workaround for dwarfs 0.15.8 (NixOS/nixpkgs#585413), taken from gh:juanqp07/nixos
     (final: prev: {
       dwarfs = prev.dwarfs.overrideAttrs (old: {
