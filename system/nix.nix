@@ -18,6 +18,15 @@
       colmena;
     })
     occt-nix.overlays.default
+    # temporary workaround for dwarfs 0.15.8 (NixOS/nixpkgs#585413), taken from gh:juanqp07/nixos
+    (final: prev: {
+      dwarfs = prev.dwarfs.overrideAttrs (old: {
+        doCheck = false;
+        cmakeFlags =
+          (lib.remove "-DWITH_TESTS=ON" (old.cmakeFlags or [ ]))
+          ++ [ "-DWITH_TESTS=OFF" ];
+      });
+    })
   ];
 
   # nix settings
