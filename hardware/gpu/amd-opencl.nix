@@ -34,6 +34,7 @@
   in
   [
     "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+    "L+    /opt/amdgpu/share/libdrm/amdgpu.ids   -    -    -     -    ${pkgs.libdrm}/share/libdrm/amdgpu.ids"
   ];
 
   # opencl info
