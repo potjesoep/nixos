@@ -16,6 +16,7 @@
     solaar
     vial
     # overclocking
+    cpu-x
     furmark
     occt
     (callPackage ../pkgs/memtimings {})
