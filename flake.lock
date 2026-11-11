@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "bedrockonlinux": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794416811,
+        "narHash": "sha256-lmCLX6n18j8JSzSiH/xNsXm4NHMV3626lVwGiWFU2mY=",
+        "owner": "Wyze3306",
+        "repo": "BedrockOnLinux",
+        "rev": "7620bc0111422b3abfe35ae92f3e5fcb970b32f5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Wyze3306",
+        "repo": "BedrockOnLinux",
+        "type": "github"
+      }
+    },
     "crane": {
       "locked": {
         "lastModified": 1781825982,
@@ -322,6 +342,7 @@
     },
     "root": {
       "inputs": {
+        "bedrockonlinux": "bedrockonlinux",
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
