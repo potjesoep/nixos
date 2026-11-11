@@ -34,6 +34,11 @@
     xonotic
   ];
 
+  # enable wayland for proton globally
+  environment.variables = {
+    "PROTON_ENABLE_WAYLAND" = "1";
+  };
+
   # enable ns-usbloader and its udev rules
   programs.ns-usbloader.enable = true;
 
