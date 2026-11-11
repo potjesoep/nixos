@@ -18,6 +18,7 @@
     # overclocking
     cpu-x
     furmark
+    memtest_vulkan
     occt
     (callPackage ../pkgs/memtimings {})
     # 3d printing
