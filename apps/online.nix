@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -31,6 +31,7 @@
       withTTS = true;
       withMiddleClickScroll = true;
     })
+    inputs.sable-next.packages.${pkgs.stdenv.system}.sable-desktop
     element-desktop
     fluffychat
     signal-desktop

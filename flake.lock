@@ -349,6 +349,7 @@
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "occt-nix": "occt-nix",
+        "sable-next": "sable-next",
         "spicetify-nix": "spicetify-nix"
       }
     },
@@ -371,6 +372,26 @@
         "owner": "oxalica",
         "repo": "rust-overlay",
         "type": "github"
+      }
+    },
+    "sable-next": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1794486383,
+        "narHash": "sha256-wlb8ai+yzBR20L3LtkQzmyQVGBCh2zbD5zNDbJSiGyY=",
+        "ref": "refs/heads/main",
+        "rev": "36d70cc0aba16ca8211260110841d11b92707775",
+        "revCount": 8031,
+        "type": "git",
+        "url": "https://git.sable.moe/SableClient/sable-next"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.sable.moe/SableClient/sable-next"
       }
     },
     "spicetify-nix": {

@@ -24,13 +24,17 @@
       url = "github:Daaboulex/OCCT-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    sable-next = {
+      url = "git+https://git.sable.moe/SableClient/sable-next";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, home-manager, lanzaboote, occt-nix, nixpkgs, nixpkgs-patcher, spicetify-nix, ... }@inputs:
+  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, spicetify-nix, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs-patcher.lib.nixosSystem {

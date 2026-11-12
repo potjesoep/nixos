@@ -20,7 +20,7 @@
     # minecraft
     mcaselector
     prismlauncher
-    inputs.bedrockonlinux.packages.x86_64-linux.default
+    inputs.bedrockonlinux.packages.${pkgs.stdenv.system}.default
     # misc
     (tetrio-desktop.override {
       #tetrio-plus = nur.repos.juxgd.tetrio-plus;
