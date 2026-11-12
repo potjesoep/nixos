@@ -12,6 +12,7 @@
       enable32Bit = true;
       extraPackages = with pkgs; [
         libvdpau-va-gl
+        mesa.opencl
         rocmPackages.clr.icd
       ];
     };
@@ -48,6 +49,7 @@
   # Set libva driver name for hardware accelerataed video encoding/decoding
   environment.variables = {
     LIBVA_DRIVER_NAME = "radeonsi";
+    RUSTICL_ENABLE = "radeonsi";
     VDPAU_DRIVER = "va_gl";
   };
 }
