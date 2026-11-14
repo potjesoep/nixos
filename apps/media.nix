@@ -39,7 +39,7 @@
         quality-menu
         sponsorblock-minimal
         thumbfast
-        #uosc
+        uosc
       ];
     })
     ffmpeg-full
