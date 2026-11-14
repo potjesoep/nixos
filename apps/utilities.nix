@@ -52,4 +52,10 @@
 
   # Enable kde partition manager
   programs.partition-manager.enable = true;
+
+  # Openrgb service for RGB control
+  services.hardware.openrgb = {
+    enable = true;
+    motherboard = "amd";
+  };
 }
