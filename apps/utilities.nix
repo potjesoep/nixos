@@ -20,6 +20,8 @@
     furmark
     memtest_vulkan
     occt
+    ryzenadj
+    zenmonitor
     (callPackage ../pkgs/memtimings {})
     # 3d printing
     blender
