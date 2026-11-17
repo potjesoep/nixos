@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794416811,
-        "narHash": "sha256-lmCLX6n18j8JSzSiH/xNsXm4NHMV3626lVwGiWFU2mY=",
+        "lastModified": 1794742073,
+        "narHash": "sha256-P2VhErHenM5PbhA8fioHg5gRqdfQQJ5zh209YQNUxD8=",
         "owner": "Wyze3306",
         "repo": "BedrockOnLinux",
-        "rev": "7620bc0111422b3abfe35ae92f3e5fcb970b32f5",
+        "rev": "8ed2e52b03e47b5bed531e3b418102c282efcefd",
         "type": "github"
       },
       "original": {
@@ -175,11 +175,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794278858,
-        "narHash": "sha256-rkrJwLgLSHBnXfgoSKIDa+2LLGdTqynsV3GAxOTGhUU=",
+        "lastModified": 1794865930,
+        "narHash": "sha256-a3My+u9CEwEFmuGXb3PV9COj7Gd8o28b19TvtDiKPfg=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "82ce401aa350502897c3f2e85f384d61cd3b0b6d",
+        "rev": "9d7ba6bef3904a018d38b92f83132eaf01eb8ef3",
         "type": "github"
       },
       "original": {
@@ -214,11 +214,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1794042290,
-        "narHash": "sha256-ziZn2PvCJE5JEEpqTdxXwJpPB+L3YqoCpTAMCzyaP3U=",
+        "lastModified": 1794537146,
+        "narHash": "sha256-Wpz/7x/YWnDIBu7yj6ixe8j6fIMsidd9Y+o1PqPF3iM=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "f4a03c008967841f2a0b3cb7c436fc6fc31671f6",
+        "rev": "d5cc6833999746cffdfe0598f7bc801a57b887a9",
         "type": "github"
       },
       "original": {
@@ -281,11 +281,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794436809,
-        "narHash": "sha256-TICjz6cP2xVa9Ac2TF/VV5vcd+ATqQR4JzJgi5P/eMc=",
+        "lastModified": 1794874125,
+        "narHash": "sha256-/8NvSyMTgZth7G5yH3vQgM+EJKiwcl5p9cGiYWwXA+s=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "a5bc6e23abb2452bfb6f101df05d18e5646d840e",
+        "rev": "8b263ec03e4559613f64c83172bcffcd8a9d1804",
         "type": "github"
       },
       "original": {
@@ -304,11 +304,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1794249432,
-        "narHash": "sha256-5Nz+WaEmWAr3Q6524U9E+baHt3mriu+33lR+mNyaEpQ=",
+        "lastModified": 1794838890,
+        "narHash": "sha256-AA2PRj3/WUklqMYQd/DSulWCpio4Uynsh91AAT1ExOo=",
         "owner": "Daaboulex",
         "repo": "OCCT-nix",
-        "rev": "1e7308ed52875106438e3b65affaab68cdf44380",
+        "rev": "a317176add0dab503a267ee8dd9b4334fe08ad7c",
         "type": "github"
       },
       "original": {
@@ -381,11 +381,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794486383,
-        "narHash": "sha256-wlb8ai+yzBR20L3LtkQzmyQVGBCh2zbD5zNDbJSiGyY=",
+        "lastModified": 1794869409,
+        "narHash": "sha256-fhq84mRH9oWNA9/rT+wlK/5wqOvyWDckHRh0/3msMjg=",
         "ref": "refs/heads/main",
-        "rev": "36d70cc0aba16ca8211260110841d11b92707775",
-        "revCount": 8031,
+        "rev": "858f409c8d3b6893c02948e93b01f559532638b5",
+        "revCount": 8331,
         "type": "git",
         "url": "https://git.sable.moe/SableClient/sable-next"
       },
@@ -402,11 +402,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1793662659,
-        "narHash": "sha256-a+za5QCDlOe/PsuMlZiBcQ13cyiyOscK17BAJFu1/dE=",
+        "lastModified": 1794871977,
+        "narHash": "sha256-An9Qcr31Z+PmF4TlJWY6RkM4yPbBKc2vkyp6NctvMEk=",
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "rev": "13e6fed4eb99f809d390fb50f591bed6cb716dc0",
+        "rev": "cd7d88aca6db91899373d5574bb252547f4c8c2c",
         "type": "github"
       },
       "original": {
@@ -428,11 +428,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794144446,
-        "narHash": "sha256-H5JXzPOhAmXZdJmgzTONYfrt326PMGHVgQbasSIef7E=",
+        "lastModified": 1794714279,
+        "narHash": "sha256-r1XtjLueN3/y4ycu84u/spswORgnn73NMZz3CpWy3fg=",
         "owner": "Daaboulex",
         "repo": "nix-packaging-standard",
-        "rev": "36fed310b9bf330b80562fcfd4a631bf3f5ac6de",
+        "rev": "0a928359c0b995126615270842f33424feef0b22",
         "type": "github"
       },
       "original": {
