@@ -4,6 +4,10 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-patcher.url = "github:gepbird/nixpkgs-patcher";
+    nixpkgs-patch-pymediainfo-fix-build = {
+      url = "https://github.com/NixOS/nixpkgs/pull/588048.diff";
+      flake = false;
+    };
     bedrockonlinux = {
       url = "github:Wyze3306/BedrockOnLinux";
       inputs.nixpkgs.follows = "nixpkgs";

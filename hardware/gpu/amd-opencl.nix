@@ -18,8 +18,9 @@
     };
   };
 
-  # enable rocM support globally
-  nixpkgs.config.rocmSupport = true;
+  # TODO: enable when updated to ROCm 10.1 or build fixed
+  # enable ROCm support globally
+  #nixpkgs.config.rocmSupport = true;
 
   # set location for HIP file to workaround issues
   systemd.tmpfiles.rules =
