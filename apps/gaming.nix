@@ -31,6 +31,7 @@
     heroic
     itch
     mangohud
+    protonup-qt
     r2modman
     xonotic
   ];
@@ -60,5 +61,16 @@
     SUBSYSTEM=="hidraw", ATTRS{idProduct}=="3109", ATTRS{idVendor}=="2dc8", TAG+="uaccess"
   '';
 
-  programs.steam.enable = true;
+  programs.steam = {
+    enable = true;
+    protontricks.enable = true;
+    extraCompatPackages = with pkgs; [
+      proton-ge-bin
+    ];
+    # open steam ports
+    dedicatedServer.openFirewall = true;
+    localNetworkGameTransfers.openFirewall = true;
+    remotePlay.openFirewall = true;
+  };
+  hardware.steam-hardware.enable = true;
 }
