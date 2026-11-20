@@ -258,18 +258,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-patch-pymediainfo-fix-build": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-dRnomYumlQZBOcm75Ot5+oniaa02pXiszHQGaK3tOOs=",
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/588048.diff"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/NixOS/nixpkgs/pull/588048.diff"
-      }
-    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1793529490,
@@ -358,7 +346,6 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
-        "nixpkgs-patch-pymediainfo-fix-build": "nixpkgs-patch-pymediainfo-fix-build",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "occt-nix": "occt-nix",
