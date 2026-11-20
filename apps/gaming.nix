@@ -63,6 +63,12 @@
 
   programs.steam = {
     enable = true;
+    package = pkgs.steam.override {
+      extraPkgs = pkgs': with pkgs'; [
+        libvdpau
+        libxtst
+      ];
+    };
     protontricks.enable = true;
     extraCompatPackages = with pkgs; [
       proton-ge-bin
