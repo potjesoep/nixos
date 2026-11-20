@@ -42,8 +42,8 @@
         uosc
       ];
     })
-    ffmpeg-full
     chatterino7
+    ffmpeg-full
     handbrake
     mkvtoolnix-cli
     streamlink
