@@ -281,11 +281,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795164351,
-        "narHash": "sha256-KgbaAB3jauQxlHtOvyf/LgKlzORo4Gcc9VWqvHXzdvo=",
+        "lastModified": 1795198946,
+        "narHash": "sha256-TLQEd6V5rMobx9ZMutHwkXfzKdop3rTQKJo0bToyVjo=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "44da7fdcfc8c344be08c55bbea944d775c355c87",
+        "rev": "fff99871b1032711df813e88b9163af38d75c61a",
         "type": "github"
       },
       "original": {
@@ -304,11 +304,11 @@
         "std": "std"
       },
       "locked": {
-        "lastModified": 1795100251,
-        "narHash": "sha256-bbGMuz1iAIfyHLWRqLAnsunSN51wfTknX4wG4nqlr5w=",
+        "lastModified": 1795185612,
+        "narHash": "sha256-X3+sPiyxZTz+uOTCS4CHw2IdVQd2wuGZrpvDWs7J0Oo=",
         "owner": "Daaboulex",
         "repo": "OCCT-nix",
-        "rev": "d8488ca549b4290f34ed18168512d07a6a6d8ecc",
+        "rev": "3e2b7feba100f326fd435018923bcd74daa1e902",
         "type": "github"
       },
       "original": {
@@ -381,11 +381,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795151995,
-        "narHash": "sha256-J/2+oCEgNN+N4TOdI1k90IcAdCuJTcG+qmuROWObGJY=",
+        "lastModified": 1795195734,
+        "narHash": "sha256-wB47Hsv1HDkAiDrkWREtuncLqrQIP6zdhi7sAlHA6Nc=",
         "ref": "refs/heads/main",
-        "rev": "f72e2e9c0fb467cd4e43f70e1a809fad46c00ba4",
-        "revCount": 8513,
+        "rev": "a7597b8d5b3cea3dc4f22d6d312dfab8443287d8",
+        "revCount": 8553,
         "type": "git",
         "url": "https://git.sable.moe/SableClient/sable-next"
       },
