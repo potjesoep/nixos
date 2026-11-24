@@ -36,9 +36,10 @@
     xonotic
   ];
 
-  # enable wayland for proton globally
+  # enable wayland and anti lag for proton globally
   environment.variables = {
     "PROTON_ENABLE_WAYLAND" = "1";
+    "ENABLE_LAYER_MESA_ANTI_LAG" = "1";
   };
 
   # enable ns-usbloader and its udev rules
