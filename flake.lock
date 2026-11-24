@@ -281,11 +281,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795489578,
-        "narHash": "sha256-HnFJGiv6fFjdqFw+owIJjNC7kqqKg5p6eEmEv+/uFMw=",
+        "lastModified": 1795505929,
+        "narHash": "sha256-Jn6M+SeccJZcC3s5xX0Q7fIJ9Vrq6Ib2GehkqVePILU=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "4c82b14d53cc1c91e999538b09fb541599084b03",
+        "rev": "205b26ad87f70718b08113bcad7fa470618769e0",
         "type": "github"
       },
       "original": {
@@ -381,11 +381,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795477849,
-        "narHash": "sha256-qsk4qn9XZ/j4CIKLE4z+iqPh/7TSvDo9BuFDQwLgyAI=",
+        "lastModified": 1795504933,
+        "narHash": "sha256-Y7V3eHC08UTkKVLA2/P2LdsMbN1i1nLiHZZNyzvv0N8=",
         "ref": "refs/heads/main",
-        "rev": "4f00e7ceb2bdd1df3bb505a1936b391ea7964fa4",
-        "revCount": 8699,
+        "rev": "fce9c32e5a215519532325163faee4ab8cb02174",
+        "revCount": 8703,
         "type": "git",
         "url": "https://git.sable.moe/SableClient/sable-next"
       },
