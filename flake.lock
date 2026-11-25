@@ -258,6 +258,18 @@
         "type": "github"
       }
     },
+    "nixpkgs-patch-update-tuta-desktop": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-u6CC7KIS4IhnjBqEkgNPbexsHJQPnaGtFn7CCK1xFao=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/578432.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/578432.diff"
+      }
+    },
     "nixpkgs-patcher": {
       "locked": {
         "lastModified": 1793529490,
@@ -346,6 +358,7 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-patch-update-tuta-desktop": "nixpkgs-patch-update-tuta-desktop",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",
         "occt-nix": "occt-nix",
