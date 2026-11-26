@@ -258,6 +258,30 @@
         "type": "github"
       }
     },
+    "nixpkgs-patch-remove-dolphin-deps-lutris": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-ENDVNK9F90cuopd1KFdC6odC1HmsmuyNnuDuSD5Y0Mo=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/592469.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/592469.diff"
+      }
+    },
+    "nixpkgs-patch-update-lutris": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-iM7s0Q4rnBTnONNlU8iO1OtVBGL+0XBh2mkec8DBTfo=",
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/593409.diff"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/NixOS/nixpkgs/pull/593409.diff"
+      }
+    },
     "nixpkgs-patch-update-tuta-desktop": {
       "flake": false,
       "locked": {
@@ -358,6 +382,8 @@
         "home-manager": "home-manager",
         "lanzaboote": "lanzaboote",
         "nixpkgs": "nixpkgs",
+        "nixpkgs-patch-remove-dolphin-deps-lutris": "nixpkgs-patch-remove-dolphin-deps-lutris",
+        "nixpkgs-patch-update-lutris": "nixpkgs-patch-update-lutris",
         "nixpkgs-patch-update-tuta-desktop": "nixpkgs-patch-update-tuta-desktop",
         "nixpkgs-patcher": "nixpkgs-patcher",
         "nur": "nur",

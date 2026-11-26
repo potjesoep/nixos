@@ -8,6 +8,14 @@
       url = "https://github.com/NixOS/nixpkgs/pull/578432.diff";
       flake = false;
     };
+    nixpkgs-patch-update-lutris = {
+      url = "https://github.com/NixOS/nixpkgs/pull/593409.diff";
+      flake = false;
+    };
+    nixpkgs-patch-remove-dolphin-deps-lutris = {
+      url = "https://github.com/NixOS/nixpkgs/pull/592469.diff";
+      flake = false;
+    };
     bedrockonlinux = {
       url = "github:Wyze3306/BedrockOnLinux";
       inputs.nixpkgs.follows = "nixpkgs";

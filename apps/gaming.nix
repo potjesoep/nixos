@@ -30,6 +30,7 @@
     goverlay
     heroic
     itch
+    lutris
     mangohud
     protonup-qt
     r2modman
