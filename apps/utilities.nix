@@ -19,6 +19,7 @@
     cpu-x
     furmark
     memtest_vulkan
+    mprime
     occt
     (callPackage ../pkgs/memtimings {})
     # 3d printing
