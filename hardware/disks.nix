@@ -8,6 +8,7 @@
     services.lvm.enable = true;
     luks.devices."crypt_root".device = "/dev/disk/by-partlabel/part_root";
     luks.devices."crypt_swap".device = "/dev/disk/by-partlabel/part_swap";
+    luks.devices."crypt_lite".device = "/dev/disk/by-partlabel/part_lite";
   };
 
   fileSystems."/" = {
@@ -20,6 +21,11 @@
     device = "/dev/disk/by-label/tree_move";
     fsType = "ntfs-3g";
     options = [ "users" "rw" "uid=cuddles" "nofail" ];
+  };
+  fileSystems."/mnt/lite" = {
+    device = "/dev/disk/by-label/tree_lite";
+    fsType = "f2fs";
+    options = [ "nofail" ];
   };
 
   swapDevices = [
