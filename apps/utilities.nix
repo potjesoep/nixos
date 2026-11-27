@@ -16,6 +16,7 @@
     solaar
     vial
     # overclocking
+    corectrl
     cpu-x
     furmark
     memtest_vulkan
