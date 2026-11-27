@@ -40,9 +40,7 @@
   # enable wayland and anti lag for proton globally
   environment.variables = {
     "ENABLE_LAYER_MESA_ANTI_LAG" = "1";
-    "PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES" = "1";
     "PROTON_ENABLE_WAYLAND" = "1";
-    "STEAMVR_MOTION_AMD" = "1";
   };
 
   # enable ns-usbloader and its udev rules
@@ -55,6 +53,7 @@
     capSysNice = true;
   };
 
+  # udev rules for 8bitdo controllers
   services.udev.extraRules = ''
     # 8BitDo Ultimate Bluetooth Controller's boot HID interface (seems to be shared by multiple 8BitDo devices)
     # Change it only if lsusb prints different Product ID when device is in bootloader mode.
@@ -65,6 +64,7 @@
     SUBSYSTEM=="hidraw", ATTRS{idProduct}=="3109", ATTRS{idVendor}=="2dc8", TAG+="uaccess"
   '';
 
+  # enable steam and settings
   programs.steam = {
     enable = true;
     package = pkgs.steam.override {
@@ -90,4 +90,11 @@
     highPriority = true;
     defaultruntime =  true;
   };
+  # vr environment variables
+  environment.variables = {
+    "PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES" = "1";
+    "STEAMVR_MOTION_AMD" = "1";
+    "STEAMVR_LH_ENABLE" = "true";
+  };
+
 }
