@@ -39,8 +39,9 @@
 
   # enable wayland and anti lag for proton globally
   environment.variables = {
-    "PROTON_ENABLE_WAYLAND" = "1";
     "ENABLE_LAYER_MESA_ANTI_LAG" = "1";
+    "PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES" = "1";
+    "PROTON_ENABLE_WAYLAND" = "1";
     "STEAMVR_MOTION_AMD" = "1";
   };
 
