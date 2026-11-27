@@ -82,4 +82,11 @@
     remotePlay.openFirewall = true;
   };
   hardware.steam-hardware.enable = true;
+
+  # monado vr runtime
+  services.monado = {
+    enable = true;
+    highPriority = true;
+    defaultruntime =  true;
+  };
 }
