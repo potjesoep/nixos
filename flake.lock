@@ -175,11 +175,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795699347,
-        "narHash": "sha256-9VbfnntwEYRAyfLpxchf1+EI7efzM7hMVfPDwIBqEKg=",
+        "lastModified": 1795713076,
+        "narHash": "sha256-GUY/RHSSnAJKKI3xk7xrSXrsXFgIOgFrRJOD4uub5J8=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "a3a080dad466c6352a869b48bd6d4860dab3ce94",
+        "rev": "361da94fb55c67094ec47322d2757d6616a0de92",
         "type": "github"
       },
       "original": {
@@ -261,7 +261,7 @@
     "nixpkgs-patch-remove-dolphin-deps-lutris": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-ENDVNK9F90cuopd1KFdC6odC1HmsmuyNnuDuSD5Y0Mo=",
+        "narHash": "sha256-vUdXMgTJJEsOjAJd3zLO+UkSHVPt72usJj2BHnjQtOc=",
         "type": "file",
         "url": "https://github.com/NixOS/nixpkgs/pull/592469.diff"
       },
@@ -273,7 +273,7 @@
     "nixpkgs-patch-update-lutris": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-iM7s0Q4rnBTnONNlU8iO1OtVBGL+0XBh2mkec8DBTfo=",
+        "narHash": "sha256-Rh63IaA5zeflfzhWd00+ZsjX1YEL+TrT79RagJBKpWY=",
         "type": "file",
         "url": "https://github.com/NixOS/nixpkgs/pull/593409.diff"
       },
@@ -317,11 +317,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795702237,
-        "narHash": "sha256-MXeK15i7DKI2plzsYygyJBtJSjeA4tiWDmAHxFDnny0=",
+        "lastModified": 1795740834,
+        "narHash": "sha256-Tn48ykSPxKwtLeeAuuBjiBnFWA8UmZjYBKTbSj8l/CE=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "0414437cc9255df518d391922b13de64f8e42514",
+        "rev": "3fafd18abd4551c1f05f35795ff098d804286898",
         "type": "github"
       },
       "original": {
@@ -420,11 +420,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1795700740,
-        "narHash": "sha256-UCib3xjlX3oxKzHCdKZ5ir4VNCoyiVftEXXjJXpjEUc=",
+        "lastModified": 1795707109,
+        "narHash": "sha256-CLqGhGuMkWQlBnTtBVTYLiom1VIJsNX/KjV/aW0iT/M=",
         "ref": "refs/heads/main",
-        "rev": "3a6a24b19208ece2a40131eeba560d0e873c150e",
-        "revCount": 8848,
+        "rev": "fb6733cae96385ea6a2113915dcae661d512a086",
+        "revCount": 8862,
         "type": "git",
         "url": "https://git.sable.moe/SableClient/sable-next"
       },
