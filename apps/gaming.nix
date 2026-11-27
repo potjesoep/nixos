@@ -88,7 +88,7 @@
   services.monado = {
     enable = true;
     highPriority = true;
-    defaultruntime =  true;
+    defaultRuntime =  true;
   };
   # vr environment variables
   environment.variables = {
