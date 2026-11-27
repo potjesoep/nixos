@@ -35,6 +35,8 @@
     protonup-qt
     r2modman
     xonotic
+    # vr
+    xrizer
   ];
 
   # enable wayland and anti lag for proton globally
@@ -68,6 +70,14 @@
   programs.steam = {
     enable = true;
     package = pkgs.steam.override {
+      extraProfile = ''
+        # Allows Monado/WiVRn to be used
+        export PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES=1
+        # enable motion smoothing on amd
+        export STEAMVR_MOTION_AMD=1
+        # Fixes timezones on VRChat
+        unset TZ
+      '';
       extraPkgs = pkgs': with pkgs'; [
         libvdpau
         libxtst
@@ -92,9 +102,35 @@
   };
   # vr environment variables
   environment.variables = {
-    "PRESSURE_VESSEL_IMPORT_OPENXR_1_RUNTIMES" = "1";
-    "STEAMVR_MOTION_AMD" = "1";
-    "STEAMVR_LH_ENABLE" = "true";
   };
+  # monado environment variables
+  systemd.user.services.monado = {
+    environment = {
+      IPC_EXIT_WHEN_IDLE = "1";
+      STEAMVR_LH_ENABLE = "1";
+      U_PACING_APP_USE_MIN_FRAME_PERIOD = "1";
+      U_PACING_COMP_MIN_TIME_MS = "5";
+    };
+    serviceConfig.Nice = -20;
+  };
+  xdg.configFile."openvr/openvrpaths.vrpath".text = let
+    steam = "${config.xdg.dataHome}/Steam";
+  in builtins.toJSON {
+    version = 1;
+    jsonid = "vrpathreg";
 
+    external_drivers = null;
+    config = [ "${steam}/config" ];
+
+    log = [ "${steam}/logs" ];
+
+    runtime = [
+      "${pkgs.xrizer}/lib/xrizer"
+      # OR
+      #"${pkgs.opencomposite}/lib/opencomposite"
+      # OR (using nixpkgs-xr)
+      # "${pkgs.vapor}/lib/VapoR"
+    ];
+  };
+  xdg.configFile."openxr/1/active_runtime.json".source = "${pkgs.monado}/share/openxr/1/openxr_monado.json";
 }
