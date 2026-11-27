@@ -41,6 +41,7 @@
   environment.variables = {
     "PROTON_ENABLE_WAYLAND" = "1";
     "ENABLE_LAYER_MESA_ANTI_LAG" = "1";
+    "STEAMVR_MOTION_AMD" = "1";
   };
 
   # enable ns-usbloader and its udev rules
