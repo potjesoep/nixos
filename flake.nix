@@ -16,6 +16,10 @@
       url = "https://github.com/NixOS/nixpkgs/pull/592469.diff";
       flake = false;
     };
+    nixpkgs-xr = {
+      url = "github:nix-community/nixpkgs-xr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     bedrockonlinux = {
       url = "github:Wyze3306/BedrockOnLinux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -46,7 +50,7 @@
     };
   };
 
-  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, spicetify-nix, ... }@inputs:
+  outputs = { self, home-manager, lanzaboote, nixpkgs, nixpkgs-patcher, nixpkgs-xr, spicetify-nix, ... }@inputs:
   {
     nixosConfigurations = {
       nixos = nixpkgs-patcher.lib.nixosSystem {
@@ -76,6 +80,7 @@
           ./users/cuddles.nix
           home-manager.nixosModules.default
           lanzaboote.nixosModules.lanzaboote
+          nixpkgs-xr.nixosModules.nixpkgs-xr
           spicetify-nix.nixosModules.spicetify
         ];
         specialArgs = inputs // { inherit inputs; };
